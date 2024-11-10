@@ -135,23 +135,23 @@
   "../../../bd/mb_block/ip/mb_block_axi_gpio_0_2/sim/mb_block_axi_gpio_0_2.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
-  "../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/hdmi_tx_0/hdl/encode.v" \
-  "../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/hdmi_tx_0/hdl/serdes_10_to_1.v" \
-  "../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/hdmi_tx_0/hdl/srldelay.v" \
-  "../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/hdmi_tx_0/hdl/hdmi_tx_v1_0.v" \
-  "../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/hdmi_tx_0/sim/hdmi_tx_0.v" \
-  "../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
-  "../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/clk_wiz_0/clk_wiz_0.v" \
+  "../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/src/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
+  "../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/src/hdmi_tx_0/hdl/encode.v" \
+  "../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/src/hdmi_tx_0/hdl/serdes_10_to_1.v" \
+  "../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/src/hdmi_tx_0/hdl/srldelay.v" \
+  "../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/src/hdmi_tx_0/hdl/hdmi_tx_v1_0.v" \
+  "../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/src/hdmi_tx_0/sim/hdmi_tx_0.v" \
+  "../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/src/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
+  "../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/src/clk_wiz_0/clk_wiz_0.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib -sv \
-  "../../../bd/mb_block/ipshared/a37a/src/Color_Mapper.sv" \
-  "../../../bd/mb_block/ipshared/a37a/src/Dinosaur.sv" \
-  "../../../bd/mb_block/ipshared/a37a/src/VGA_controller.sv" \
-  "../../../bd/mb_block/ipshared/a37a/src/font_rom.sv" \
-  "../../../bd/mb_block/ipshared/a37a/src/hdmi_dino_controller_AXI.sv" \
-  "../../../bd/mb_block/ipshared/a37a/src/hdmi_dino_controller.sv" \
-  "../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/sim/mb_block_hdmi_dino_controller_0_0.sv" \
+  "../../../bd/mb_block/ipshared/6f57/src/Color_Mapper.sv" \
+  "../../../bd/mb_block/ipshared/6f57/src/Dinosaur.sv" \
+  "../../../bd/mb_block/ipshared/6f57/src/VGA_controller.sv" \
+  "../../../bd/mb_block/ipshared/6f57/src/font_rom.sv" \
+  "../../../bd/mb_block/ipshared/6f57/src/hdmi_dino_controller_AXI.sv" \
+  "../../../bd/mb_block/ipshared/6f57/src/hdmi_dino_controller.sv" \
+  "../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/sim/mb_block_hdmi_dino_controller_0_0.sv" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/mb_block/sim/mb_block.v" \

@@ -1,24 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 2024/11/10 13:34:23
-// Design Name: 
-// Module Name: Color_Mapper
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module Color_Mapper # 
 (
@@ -64,7 +44,7 @@ always_comb begin: FONT_Display
     pixel_y = drawY[3:0]; // Row within the font (0-15)
 
     // Calculate the VRAM address for font data
-    bram_addr_b = (font_y * 80 + font_x) << 1; // Calculate the word addr in vram
+    bram_addr_b = (font_y * 80 + font_x) >> 1; // Calculate the word addr in vram
     font_offset = (font_y * 80 + font_x) % 2; // Offset within the word to select the specific character
 
     case (font_offset)
@@ -85,7 +65,7 @@ always_comb begin: FONT_Display
     fgd_rgb = (fgd_idx[0] == 0) ? color_regs[fgd_idx[3:1]][12:1] : color_regs[fgd_idx[3:1]][24:13];
     bkg_rgb = (bkg_idx[0] == 0) ? color_regs[bkg_idx[3:1]][12:1] : color_regs[bkg_idx[3:1]][24:13];
 
-    font_addr <= {offset_data[6:0], pixel_y};
+    font_addr = {offset_data[6:0], pixel_y};
 end
 
 // Address  31-25     24-21 20-17 16-13 12-9    8-5     4-1    0

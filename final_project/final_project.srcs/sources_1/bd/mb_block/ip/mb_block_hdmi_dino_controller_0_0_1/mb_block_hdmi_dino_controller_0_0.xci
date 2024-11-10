@@ -4,7 +4,7 @@
     "xci_name": "mb_block_hdmi_dino_controller_0_0",
     "cell_name": "hdmi_dino_controller_0",
     "component_reference": "xilinx.com:user:hdmi_dino_controller:1.0",
-    "ip_revision": "12",
+    "ip_revision": "13",
     "gen_directory": "../../../../../../final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1",
     "parameters": {
       "component_parameters": {
@@ -35,7 +35,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "12" } ],
+        "IPREVISION": [ { "value": "13" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:hdmi_dino_controller:1.0
-// IP Revision: 12
+// IP Revision: 13
 
 (* X_CORE_INFO = "hdmi_dino_controller,Vivado 2022.2" *)
 (* CHECK_LICENSE_TYPE = "mb_block_hdmi_dino_controller_0_0,hdmi_dino_controller,{}" *)
-(* CORE_GENERATION_INFO = "mb_block_hdmi_dino_controller_0_0,hdmi_dino_controller,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=hdmi_dino_controller,x_ipVersion=1.0,x_ipCoreRevision=12,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_AXI_DATA_WIDTH=32,C_AXI_ADDR_WIDTH=16}" *)
+(* CORE_GENERATION_INFO = "mb_block_hdmi_dino_controller_0_0,hdmi_dino_controller,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=hdmi_dino_controller,x_ipVersion=1.0,x_ipCoreRevision=13,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_AXI_DATA_WIDTH=32,C_AXI_ADDR_WIDTH=16}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module mb_block_hdmi_dino_controller_0_0 (
   hdmi_clk_n,

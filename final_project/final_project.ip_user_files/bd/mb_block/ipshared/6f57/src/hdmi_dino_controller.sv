@@ -54,13 +54,13 @@ module hdmi_dino_controller #
 );
 
 //additional logic variables as necessary to support VGA, and HDMI modules.
-    logic clk_25MHz, clk_125MHz;
-    logic hs, vs, vde;
-    logic [9:0] drawX, drawY;
-    logic [3:0] red, green, blue;
-    logic reset_ah, locked;
+logic clk_25MHz, clk_125MHz;
+logic hs, vs, vde;
+logic [9:0] drawX, drawY;
+logic [3:0] red, green, blue;
+logic reset_ah, locked;
 
-    assign reset_ah = ~axi_aresetn; // revert the signal
+assign reset_ah = ~axi_aresetn; // revert the signal
     
 // BRAM Interface Signals
 logic [C_AXI_ADDR_WIDTH-1:0] bram_addr_a, bram_addr_b;
@@ -166,13 +166,13 @@ blk_mem_gen_0 blk_mem (
     // Port B - Display Logic
     .addrb(bram_addr_b),
     .clkb(axi_aclk),
-    .dinb(),
+    .dinb(1'b0),
     .doutb(hdmi_bram_dout),
     .enb(1'b1),
-    .web()
+    .web(4'b0)
 );
     
-Color_Mapper  #(
+Color_Mapper #(
     .C_S_AXI_DATA_WIDTH(C_AXI_DATA_WIDTH),
     .C_S_AXI_ADDR_WIDTH(C_AXI_ADDR_WIDTH)
 ) color_mapper_inst (
@@ -185,7 +185,7 @@ Color_Mapper  #(
     .bram_addr_b(bram_addr_b)
 );
 
-Dinosaur dinosuar_inst(
+Dinosaur dinosaur_inst (
     .keycode(keycode)
 );
 // User logic ends

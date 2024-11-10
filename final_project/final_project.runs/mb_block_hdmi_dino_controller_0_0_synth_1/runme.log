@@ -10,6 +10,7 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source mb_block_hdmi_dino_controller_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 373.469 ; gain = 62.176
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/U.I.U.C/FA24/ECE385/final_project/ip_repo/hdmi_dino_controller_1_0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/U.I.U.C/FA24/ECE385/final_project/hdmi_tx_1.0'.
@@ -22,19 +23,19 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
 INFO: [Device 21-403] Loading part xc7s50csga324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 30240
+INFO: [Synth 8-7075] Helper process launched with PID 49464
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [F:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 WARNING: [Synth 8-11065] parameter 'CTRLTOKEN0' becomes localparam in 'encode' with formal parameter declaration list [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/src/hdmi_tx_0/hdl/encode.v:145]
 WARNING: [Synth 8-11065] parameter 'CTRLTOKEN1' becomes localparam in 'encode' with formal parameter declaration list [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/src/hdmi_tx_0/hdl/encode.v:146]
 WARNING: [Synth 8-11065] parameter 'CTRLTOKEN2' becomes localparam in 'encode' with formal parameter declaration list [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/src/hdmi_tx_0/hdl/encode.v:147]
 WARNING: [Synth 8-11065] parameter 'CTRLTOKEN3' becomes localparam in 'encode' with formal parameter declaration list [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/src/hdmi_tx_0/hdl/encode.v:148]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1187.898 ; gain = 406.680
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1188.988 ; gain = 408.363
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'mb_block_hdmi_dino_controller_0_0' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/synth/mb_block_hdmi_dino_controller_0_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_dino_controller' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/aa06/src/hdmi_dino_controller.sv:11]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_dino_controller_AXI' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/aa06/src/hdmi_dino_controller_AXI.sv:10]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_dino_controller_AXI' (0#1) [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/aa06/src/hdmi_dino_controller_AXI.sv:10]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_dino_controller' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/6f57/src/hdmi_dino_controller.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_dino_controller_AXI' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/6f57/src/hdmi_dino_controller_AXI.sv:10]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_dino_controller_AXI' (0#1) [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/6f57/src/hdmi_dino_controller_AXI.sv:10]
 INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/src/clk_wiz_0/clk_wiz_0.v:69]
 INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0_clk_wiz' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/src/clk_wiz_0/clk_wiz_0_clk_wiz.v:69]
 INFO: [Synth 8-6157] synthesizing module 'IBUF' [F:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:71326]
@@ -45,10 +46,10 @@ INFO: [Synth 8-6157] synthesizing module 'BUFG' [F:/Xilinx/Vivado/2022.2/scripts
 INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [F:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1082]
 INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0_clk_wiz' (0#1) [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/src/clk_wiz_0/clk_wiz_0_clk_wiz.v:69]
 INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/src/clk_wiz_0/clk_wiz_0.v:69]
-INFO: [Synth 8-6157] synthesizing module 'vga_controller' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/aa06/src/VGA_controller.sv:26]
-INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (0#1) [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/aa06/src/VGA_controller.sv:26]
-WARNING: [Synth 8-7071] port 'sync' of module 'vga_controller' is unconnected for instance 'vga' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/aa06/src/hdmi_dino_controller.sv:116]
-WARNING: [Synth 8-7023] instance 'vga' of module 'vga_controller' has 8 connections declared, but only 7 given [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/aa06/src/hdmi_dino_controller.sv:116]
+INFO: [Synth 8-6157] synthesizing module 'vga_controller' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/6f57/src/VGA_controller.sv:26]
+INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (0#1) [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/6f57/src/VGA_controller.sv:26]
+WARNING: [Synth 8-7071] port 'sync' of module 'vga_controller' is unconnected for instance 'vga' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/6f57/src/hdmi_dino_controller.sv:116]
+WARNING: [Synth 8-7023] instance 'vga' of module 'vga_controller' has 8 connections declared, but only 7 given [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/6f57/src/hdmi_dino_controller.sv:116]
 INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_0' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/src/hdmi_tx_0/synth/hdmi_tx_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_v1_0' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/src/hdmi_tx_0/hdl/hdmi_tx_v1_0.v:70]
 INFO: [Synth 8-6157] synthesizing module 'srldelay' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/src/hdmi_tx_0/hdl/srldelay.v:70]
@@ -149,21 +150,21 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [d:/U.I.U.C/FA24/ECE385/
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     20.388004 mW - type: string 
 INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_5' declared at 'd:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/src/blk_mem_gen_0/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_5' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/src/blk_mem_gen_0/synth/blk_mem_gen_0.vhd:249]
 INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (0#1) [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/src/blk_mem_gen_0/synth/blk_mem_gen_0.vhd:76]
-INFO: [Synth 8-6157] synthesizing module 'Color_Mapper' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/aa06/src/Color_Mapper.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'font_rom' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/aa06/src/font_rom.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'font_rom' (0#1) [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/aa06/src/font_rom.sv:1]
-INFO: [Synth 8-155] case statement is not full and has no default [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/aa06/src/Color_Mapper.sv:50]
-INFO: [Synth 8-6155] done synthesizing module 'Color_Mapper' (0#1) [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/aa06/src/Color_Mapper.sv:3]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/aa06/src/hdmi_dino_controller.sv:188]
-INFO: [Synth 8-6157] synthesizing module 'Dinosaur' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/aa06/src/Dinosaur.sv:3]
-INFO: [Synth 8-6155] done synthesizing module 'Dinosaur' (0#1) [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/aa06/src/Dinosaur.sv:3]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_dino_controller' (0#1) [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/aa06/src/hdmi_dino_controller.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'Color_Mapper' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/6f57/src/Color_Mapper.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'font_rom' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/6f57/src/font_rom.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'font_rom' (0#1) [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/6f57/src/font_rom.sv:1]
+INFO: [Synth 8-155] case statement is not full and has no default [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/6f57/src/Color_Mapper.sv:50]
+INFO: [Synth 8-6155] done synthesizing module 'Color_Mapper' (0#1) [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/6f57/src/Color_Mapper.sv:3]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/6f57/src/hdmi_dino_controller.sv:188]
+INFO: [Synth 8-6157] synthesizing module 'Dinosaur' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/6f57/src/Dinosaur.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'Dinosaur' (0#1) [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/6f57/src/Dinosaur.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_dino_controller' (0#1) [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/6f57/src/hdmi_dino_controller.sv:11]
 INFO: [Synth 8-6155] done synthesizing module 'mb_block_hdmi_dino_controller_0_0' (0#1) [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/synth/mb_block_hdmi_dino_controller_0_0.sv:53]
 WARNING: [Synth 8-6014] Unused sequential element hdmi_ctl1_reg was removed.  [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0_1/src/hdmi_tx_0/hdl/hdmi_tx_v1_0.v:148]
-WARNING: [Synth 8-87] always_comb on 'inverse_reg' did not result in combinational logic [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/aa06/src/Color_Mapper.sv:52]
-WARNING: [Synth 8-87] always_comb on 'offset_data_reg' did not result in combinational logic [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/aa06/src/Color_Mapper.sv:53]
-WARNING: [Synth 8-87] always_comb on 'fgd_idx_reg' did not result in combinational logic [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/aa06/src/Color_Mapper.sv:54]
-WARNING: [Synth 8-87] always_comb on 'bkg_idx_reg' did not result in combinational logic [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/aa06/src/Color_Mapper.sv:55]
+WARNING: [Synth 8-87] always_comb on 'inverse_reg' did not result in combinational logic [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/6f57/src/Color_Mapper.sv:52]
+WARNING: [Synth 8-87] always_comb on 'offset_data_reg' did not result in combinational logic [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/6f57/src/Color_Mapper.sv:53]
+WARNING: [Synth 8-87] always_comb on 'fgd_idx_reg' did not result in combinational logic [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/6f57/src/Color_Mapper.sv:54]
+WARNING: [Synth 8-87] always_comb on 'bkg_idx_reg' did not result in combinational logic [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/6f57/src/Color_Mapper.sv:55]
 WARNING: [Synth 8-7129] Port drawY[9] in module Color_Mapper is either unconnected or has no load
 WARNING: [Synth 8-7129] Port color_regs[0][31] in module Color_Mapper is either unconnected or has no load
 WARNING: [Synth 8-7129] Port color_regs[0][30] in module Color_Mapper is either unconnected or has no load
@@ -266,18 +267,18 @@ WARNING: [Synth 8-7129] Port INJECTDBITERR in module blk_mem_gen_prim_wrapper__p
 WARNING: [Synth 8-7129] Port ECCPIPECE in module blk_mem_gen_prim_wrapper__parameterized60 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 1601.184 ; gain = 819.965
+Finished RTL Elaboration : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 1601.254 ; gain = 820.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 1601.184 ; gain = 819.965
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 1601.254 ; gain = 820.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 1601.184 ; gain = 819.965
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 1601.254 ; gain = 820.629
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.099 . Memory (MB): peak = 1601.184 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.101 . Memory (MB): peak = 1601.254 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 69 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -295,22 +296,22 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/mb_block_hdmi_dino_controller_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1601.184 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1601.254 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.115 . Memory (MB): peak = 1601.184 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 1601.254 ; gain = 0.000
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [F:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:36 ; elapsed = 00:00:44 . Memory (MB): peak = 1601.184 ; gain = 819.965
+Finished Constraint Validation : Time (s): cpu = 00:00:37 ; elapsed = 00:00:46 . Memory (MB): peak = 1601.254 ; gain = 820.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:36 ; elapsed = 00:00:44 . Memory (MB): peak = 1601.184 ; gain = 819.965
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:37 ; elapsed = 00:00:46 . Memory (MB): peak = 1601.254 ; gain = 820.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -320,7 +321,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for inst/clk_wiz. (constraint file  a
 Applied set_property KEEP_HIERARCHY = SOFT for inst/vga_to_hdmi. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for inst/blk_mem. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:44 . Memory (MB): peak = 1601.184 ; gain = 819.965
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:46 . Memory (MB): peak = 1601.254 ; gain = 820.629
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'cycle_reg' in module 'hdmi_dino_controller_AXI'
 ---------------------------------------------------------------------------------------------------
@@ -332,12 +333,12 @@ INFO: [Synth 8-802] inferred FSM for state register 'cycle_reg' in module 'hdmi_
                  iSTATE0 |                              100 |                               10
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'cycle_reg' using encoding 'one-hot' in module 'hdmi_dino_controller_AXI'
-WARNING: [Synth 8-327] inferring latch for variable 'inverse_reg' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/aa06/src/Color_Mapper.sv:52]
-WARNING: [Synth 8-327] inferring latch for variable 'bkg_idx_reg' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/aa06/src/Color_Mapper.sv:55]
-WARNING: [Synth 8-327] inferring latch for variable 'fgd_idx_reg' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/aa06/src/Color_Mapper.sv:54]
-WARNING: [Synth 8-327] inferring latch for variable 'offset_data_reg' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/aa06/src/Color_Mapper.sv:53]
+WARNING: [Synth 8-327] inferring latch for variable 'inverse_reg' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/6f57/src/Color_Mapper.sv:52]
+WARNING: [Synth 8-327] inferring latch for variable 'bkg_idx_reg' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/6f57/src/Color_Mapper.sv:55]
+WARNING: [Synth 8-327] inferring latch for variable 'fgd_idx_reg' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/6f57/src/Color_Mapper.sv:54]
+WARNING: [Synth 8-327] inferring latch for variable 'offset_data_reg' [d:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.gen/sources_1/bd/mb_block/ipshared/6f57/src/Color_Mapper.sv:53]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:38 ; elapsed = 00:00:46 . Memory (MB): peak = 1601.184 ; gain = 819.965
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:39 ; elapsed = 00:00:48 . Memory (MB): peak = 1601.254 ; gain = 820.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -409,7 +410,7 @@ INFO: [Synth 8-3332] Sequential element (inst/color_mapper_inst/offset_data_reg[
 INFO: [Synth 8-3332] Sequential element (inst/color_mapper_inst/offset_data_reg[1]) is unused and will be removed from module mb_block_hdmi_dino_controller_0_0.
 INFO: [Synth 8-3332] Sequential element (inst/color_mapper_inst/offset_data_reg[0]) is unused and will be removed from module mb_block_hdmi_dino_controller_0_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:02 ; elapsed = 00:01:13 . Memory (MB): peak = 1601.184 ; gain = 819.965
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:01:08 . Memory (MB): peak = 1601.254 ; gain = 820.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -430,19 +431,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:07 ; elapsed = 00:01:19 . Memory (MB): peak = 1601.184 ; gain = 819.965
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:01:14 . Memory (MB): peak = 1601.254 ; gain = 820.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:12 ; elapsed = 00:01:24 . Memory (MB): peak = 1601.184 ; gain = 819.965
+Finished Timing Optimization : Time (s): cpu = 00:01:06 ; elapsed = 00:01:19 . Memory (MB): peak = 1601.254 ; gain = 820.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:13 ; elapsed = 00:01:25 . Memory (MB): peak = 1601.184 ; gain = 819.965
+Finished Technology Mapping : Time (s): cpu = 00:01:07 ; elapsed = 00:01:20 . Memory (MB): peak = 1601.254 ; gain = 820.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -461,37 +462,37 @@ INFO: [Synth 8-4649] Removing BlackBox instance \inst/dinosaur_inst  of module D
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:18 ; elapsed = 00:01:31 . Memory (MB): peak = 1601.184 ; gain = 819.965
+Finished IO Insertion : Time (s): cpu = 00:01:12 ; elapsed = 00:01:26 . Memory (MB): peak = 1601.254 ; gain = 820.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:18 ; elapsed = 00:01:31 . Memory (MB): peak = 1601.184 ; gain = 819.965
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:12 ; elapsed = 00:01:26 . Memory (MB): peak = 1601.254 ; gain = 820.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:18 ; elapsed = 00:01:31 . Memory (MB): peak = 1601.184 ; gain = 819.965
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:12 ; elapsed = 00:01:26 . Memory (MB): peak = 1601.254 ; gain = 820.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:18 ; elapsed = 00:01:31 . Memory (MB): peak = 1601.184 ; gain = 819.965
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:12 ; elapsed = 00:01:26 . Memory (MB): peak = 1601.254 ; gain = 820.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:18 ; elapsed = 00:01:31 . Memory (MB): peak = 1601.184 ; gain = 819.965
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:12 ; elapsed = 00:01:26 . Memory (MB): peak = 1601.254 ; gain = 820.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:18 ; elapsed = 00:01:31 . Memory (MB): peak = 1601.184 ; gain = 819.965
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:12 ; elapsed = 00:01:26 . Memory (MB): peak = 1601.254 ; gain = 820.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -542,18 +543,18 @@ Report Cell Usage:
 |20    |OBUFDS     |     4|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:18 ; elapsed = 00:01:31 . Memory (MB): peak = 1601.184 ; gain = 819.965
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:12 ; elapsed = 00:01:26 . Memory (MB): peak = 1601.254 ; gain = 820.629
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 222 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:47 ; elapsed = 00:01:27 . Memory (MB): peak = 1601.184 ; gain = 819.965
-Synthesis Optimization Complete : Time (s): cpu = 00:01:18 ; elapsed = 00:01:31 . Memory (MB): peak = 1601.184 ; gain = 819.965
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:01:22 . Memory (MB): peak = 1601.254 ; gain = 820.629
+Synthesis Optimization Complete : Time (s): cpu = 00:01:12 ; elapsed = 00:01:26 . Memory (MB): peak = 1601.254 ; gain = 820.629
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1601.184 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1601.254 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 126 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1601.184 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1601.254 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -561,10 +562,10 @@ Synth Design complete, checksum: 6ccb777d
 INFO: [Common 17-83] Releasing license: Synthesis
 99 Infos, 117 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:22 ; elapsed = 00:01:37 . Memory (MB): peak = 1601.184 ; gain = 1195.352
+synth_design: Time (s): cpu = 00:01:16 ; elapsed = 00:01:33 . Memory (MB): peak = 1601.254 ; gain = 1194.977
 INFO: [Common 17-1381] The checkpoint 'D:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.runs/mb_block_hdmi_dino_controller_0_0_synth_1/mb_block_hdmi_dino_controller_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP mb_block_hdmi_dino_controller_0_0, cache-ID = 7b6df413577f701f
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP mb_block_hdmi_dino_controller_0_0, cache-ID = 399d15f8fe95468c
 INFO: [Coretcl 2-1174] Renamed 29 cell refs.
 INFO: [Common 17-1381] The checkpoint 'D:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.runs/mb_block_hdmi_dino_controller_0_0_synth_1/mb_block_hdmi_dino_controller_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file mb_block_hdmi_dino_controller_0_0_utilization_synth.rpt -pb mb_block_hdmi_dino_controller_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Nov 10 15:17:29 2024...
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 10 16:43:53 2024...
