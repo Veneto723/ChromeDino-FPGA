@@ -21,6 +21,13 @@ vlib activehdl/proc_sys_reset_v5_0_13
 vlib activehdl/lib_pkg_v1_0_2
 vlib activehdl/lib_srl_fifo_v1_0_2
 vlib activehdl/axi_uartlite_v2_0_31
+vlib activehdl/interrupt_control_v3_1_4
+vlib activehdl/axi_gpio_v2_0_29
+vlib activehdl/xlconcat_v2_1_4
+vlib activehdl/dist_mem_gen_v8_0_13
+vlib activehdl/lib_fifo_v1_0_16
+vlib activehdl/axi_quad_spi_v3_2_26
+vlib activehdl/axi_timer_v2_0_29
 
 vmap xpm activehdl/xpm
 vmap microblaze_v11_0_10 activehdl/microblaze_v11_0_10
@@ -42,9 +49,17 @@ vmap proc_sys_reset_v5_0_13 activehdl/proc_sys_reset_v5_0_13
 vmap lib_pkg_v1_0_2 activehdl/lib_pkg_v1_0_2
 vmap lib_srl_fifo_v1_0_2 activehdl/lib_srl_fifo_v1_0_2
 vmap axi_uartlite_v2_0_31 activehdl/axi_uartlite_v2_0_31
+vmap interrupt_control_v3_1_4 activehdl/interrupt_control_v3_1_4
+vmap axi_gpio_v2_0_29 activehdl/axi_gpio_v2_0_29
+vmap xlconcat_v2_1_4 activehdl/xlconcat_v2_1_4
+vmap dist_mem_gen_v8_0_13 activehdl/dist_mem_gen_v8_0_13
+vmap lib_fifo_v1_0_16 activehdl/lib_fifo_v1_0_16
+vmap axi_quad_spi_v3_2_26 activehdl/axi_quad_spi_v3_2_26
+vmap axi_timer_v2_0_29 activehdl/axi_timer_v2_0_29
 
 vlog -work xpm  -sv2k12 "+incdir+../../../../final_project.gen/sources_1/bd/mb_block/ipshared/ec67/hdl" "+incdir+../../../../final_project.gen/sources_1/bd/mb_block/ipshared/7698" "+incdir+../../../../final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/clk_wiz_0" \
 "F:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+"F:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv" \
 "F:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 
 vcom -work xpm -93  \
@@ -143,21 +158,58 @@ vcom -work axi_uartlite_v2_0_31 -93  \
 vcom -work xil_defaultlib -93  \
 "../../../bd/mb_block/ip/mb_block_axi_uartlite_0_0/sim/mb_block_axi_uartlite_0_0.vhd" \
 
+vcom -work interrupt_control_v3_1_4 -93  \
+"../../../../final_project.gen/sources_1/bd/mb_block/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd" \
+
+vcom -work axi_gpio_v2_0_29 -93  \
+"../../../../final_project.gen/sources_1/bd/mb_block/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib -93  \
+"../../../bd/mb_block/ip/mb_block_axi_gpio_0_0/sim/mb_block_axi_gpio_0_0.vhd" \
+"../../../bd/mb_block/ip/mb_block_axi_gpio_0_1/sim/mb_block_axi_gpio_0_1.vhd" \
+
+vlog -work xlconcat_v2_1_4  -v2k5 "+incdir+../../../../final_project.gen/sources_1/bd/mb_block/ipshared/ec67/hdl" "+incdir+../../../../final_project.gen/sources_1/bd/mb_block/ipshared/7698" "+incdir+../../../../final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/clk_wiz_0" \
+"../../../../final_project.gen/sources_1/bd/mb_block/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v" \
+
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../final_project.gen/sources_1/bd/mb_block/ipshared/ec67/hdl" "+incdir+../../../../final_project.gen/sources_1/bd/mb_block/ipshared/7698" "+incdir+../../../../final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/clk_wiz_0" \
-"../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/hdmi_tx_0_2/hdl/encode.v" \
-"../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/hdmi_tx_0_2/hdl/serdes_10_to_1.v" \
-"../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/hdmi_tx_0_2/hdl/srldelay.v" \
-"../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/hdmi_tx_0_2/hdl/hdmi_tx_v1_0.v" \
-"../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/hdmi_tx_0_2/sim/hdmi_tx_0.v" \
+"../../../bd/mb_block/ip/mb_block_xlconcat_0_0/sim/mb_block_xlconcat_0_0.v" \
+
+vlog -work dist_mem_gen_v8_0_13  -v2k5 "+incdir+../../../../final_project.gen/sources_1/bd/mb_block/ipshared/ec67/hdl" "+incdir+../../../../final_project.gen/sources_1/bd/mb_block/ipshared/7698" "+incdir+../../../../final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/clk_wiz_0" \
+"../../../../final_project.gen/sources_1/bd/mb_block/ipshared/0bf5/simulation/dist_mem_gen_v8_0.v" \
+
+vcom -work lib_fifo_v1_0_16 -93  \
+"../../../../final_project.gen/sources_1/bd/mb_block/ipshared/6c82/hdl/lib_fifo_v1_0_rfs.vhd" \
+
+vcom -work axi_quad_spi_v3_2_26 -93  \
+"../../../../final_project.gen/sources_1/bd/mb_block/ipshared/75b9/hdl/axi_quad_spi_v3_2_rfs.vhd" \
+
+vcom -work xil_defaultlib -93  \
+"../../../bd/mb_block/ip/mb_block_axi_quad_spi_0_0/sim/mb_block_axi_quad_spi_0_0.vhd" \
+
+vcom -work axi_timer_v2_0_29 -93  \
+"../../../../final_project.gen/sources_1/bd/mb_block/ipshared/22b2/hdl/axi_timer_v2_0_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib -93  \
+"../../../bd/mb_block/ip/mb_block_axi_timer_0_0/sim/mb_block_axi_timer_0_0.vhd" \
+"../../../bd/mb_block/ip/mb_block_axi_gpio_0_2/sim/mb_block_axi_gpio_0_2.vhd" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../final_project.gen/sources_1/bd/mb_block/ipshared/ec67/hdl" "+incdir+../../../../final_project.gen/sources_1/bd/mb_block/ipshared/7698" "+incdir+../../../../final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/clk_wiz_0" \
+"../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
+"../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/hdmi_tx_0/hdl/encode.v" \
+"../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/hdmi_tx_0/hdl/serdes_10_to_1.v" \
+"../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/hdmi_tx_0/hdl/srldelay.v" \
+"../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/hdmi_tx_0/hdl/hdmi_tx_v1_0.v" \
+"../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/hdmi_tx_0/sim/hdmi_tx_0.v" \
 "../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
 "../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/clk_wiz_0/clk_wiz_0.v" \
-"../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
 
 vlog -work xil_defaultlib  -sv2k12 "+incdir+../../../../final_project.gen/sources_1/bd/mb_block/ipshared/ec67/hdl" "+incdir+../../../../final_project.gen/sources_1/bd/mb_block/ipshared/7698" "+incdir+../../../../final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/clk_wiz_0" \
-"../../../bd/mb_block/ipshared/45ba/src/VGA_controller.sv" \
-"../../../bd/mb_block/ipshared/45ba/src/font_rom.sv" \
-"../../../bd/mb_block/ipshared/45ba/src/hdmi_dino_controller.sv" \
-"../../../bd/mb_block/ipshared/45ba/src/hdmi_dino_controller_AXI.sv" \
+"../../../bd/mb_block/ipshared/a37a/src/Color_Mapper.sv" \
+"../../../bd/mb_block/ipshared/a37a/src/Dinosaur.sv" \
+"../../../bd/mb_block/ipshared/a37a/src/VGA_controller.sv" \
+"../../../bd/mb_block/ipshared/a37a/src/font_rom.sv" \
+"../../../bd/mb_block/ipshared/a37a/src/hdmi_dino_controller_AXI.sv" \
+"../../../bd/mb_block/ipshared/a37a/src/hdmi_dino_controller.sv" \
 "../../../bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/sim/mb_block_hdmi_dino_controller_0_0.sv" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../final_project.gen/sources_1/bd/mb_block/ipshared/ec67/hdl" "+incdir+../../../../final_project.gen/sources_1/bd/mb_block/ipshared/7698" "+incdir+../../../../final_project.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_dino_controller_0_0/src/clk_wiz_0" \

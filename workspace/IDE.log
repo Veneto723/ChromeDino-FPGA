@@ -1,0 +1,145 @@
+14:41:40 DEBUG : Logs will be stored at 'D:/U.I.U.C/FA24/ECE385/final_project/workspace/IDE.log'.
+14:41:44 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\U.I.U.C\FA24\ECE385\final_project\workspace\temp_xsdb_launch_script.tcl
+14:41:44 INFO  : Platform repository initialization has completed.
+14:41:44 INFO  : Registering command handlers for Vitis TCF services
+14:41:47 INFO  : XSCT server has started successfully.
+14:41:47 INFO  : plnx-install-location is set to ''
+14:41:47 INFO  : Successfully done setting XSCT server connection channel  
+14:41:47 INFO  : Successfully done query RDI_DATADIR 
+14:41:47 INFO  : Successfully done setting workspace for the tool. 
+14:42:43 INFO  : Result from executing command 'getProjects': toplevel
+14:42:43 INFO  : Result from executing command 'getPlatforms': 
+14:42:43 WARN  : An unexpected exception occurred in the module 'platform project logging'
+14:42:43 INFO  : Platform 'toplevel' is added to custom repositories.
+14:42:45 INFO  : Platform 'toplevel' is added to custom repositories.
+14:44:53 INFO  : Result from executing command 'getProjects': toplevel
+14:44:53 INFO  : Result from executing command 'getPlatforms': toplevel|D:/U.I.U.C/FA24/ECE385/final_project/workspace/toplevel/export/toplevel/toplevel.xpfm
+14:44:54 INFO  : Checking for BSP changes to sync application flags for project 'mb_dino'...
+14:45:37 INFO  : Checking for BSP changes to sync application flags for project 'mb_dino'...
+14:46:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:46:09 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+14:46:09 INFO  : 'jtag frequency' command is executed.
+14:46:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+14:46:10 INFO  : Device configured successfully with "D:/U.I.U.C/FA24/ECE385/final_project/workspace/mb_dino/_ide/bitstream/toplevel.bit"
+14:46:11 INFO  : Context for processor 'microblaze_0' is selected.
+14:46:11 INFO  : Hardware design and registers information is loaded from 'D:/U.I.U.C/FA24/ECE385/final_project/workspace/toplevel/export/toplevel/hw/toplevel.xsa'.
+14:46:11 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:46:11 INFO  : Context for processor 'microblaze_0' is selected.
+14:46:11 INFO  : System reset is completed.
+14:46:14 INFO  : 'after 3000' command is executed.
+14:46:14 INFO  : Context for processor 'microblaze_0' is selected.
+14:46:14 INFO  : The application 'D:/U.I.U.C/FA24/ECE385/final_project/workspace/mb_dino/Debug/mb_dino.elf' is downloaded to processor 'microblaze_0'.
+14:46:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file D:/U.I.U.C/FA24/ECE385/final_project/workspace/mb_dino/_ide/bitstream/toplevel.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw D:/U.I.U.C/FA24/ECE385/final_project/workspace/toplevel/export/toplevel/hw/toplevel.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow D:/U.I.U.C/FA24/ECE385/final_project/workspace/mb_dino/Debug/mb_dino.elf
+----------------End of Script----------------
+
+14:46:14 INFO  : Context for processor 'microblaze_0' is selected.
+14:46:14 INFO  : 'con' command is executed.
+14:46:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+14:46:14 INFO  : Disconnected from the channel tcfchan#2.
+15:04:18 INFO  : Result from executing command 'removePlatformRepo': 
+15:04:44 INFO  : Result from executing command 'getProjects': toplevel
+15:04:44 INFO  : Result from executing command 'getPlatforms': 
+15:04:44 INFO  : Checking for BSP changes to sync application flags for project 'mb_dino'...
+15:04:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:04:52 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+15:04:52 INFO  : 'jtag frequency' command is executed.
+15:04:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+15:04:53 INFO  : Device configured successfully with "D:/U.I.U.C/FA24/ECE385/final_project/workspace/mb_dino/_ide/bitstream/toplevel.bit"
+15:04:53 INFO  : Context for processor 'microblaze_0' is selected.
+15:04:53 INFO  : Hardware design and registers information is loaded from 'D:/U.I.U.C/FA24/ECE385/final_project/workspace/toplevel/export/toplevel/hw/toplevel.xsa'.
+15:04:53 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:04:53 INFO  : Context for processor 'microblaze_0' is selected.
+15:04:53 INFO  : System reset is completed.
+15:04:56 INFO  : 'after 3000' command is executed.
+15:04:56 INFO  : Context for processor 'microblaze_0' is selected.
+15:04:57 INFO  : The application 'D:/U.I.U.C/FA24/ECE385/final_project/workspace/mb_dino/Debug/mb_dino.elf' is downloaded to processor 'microblaze_0'.
+15:04:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file D:/U.I.U.C/FA24/ECE385/final_project/workspace/mb_dino/_ide/bitstream/toplevel.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw D:/U.I.U.C/FA24/ECE385/final_project/workspace/toplevel/export/toplevel/hw/toplevel.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow D:/U.I.U.C/FA24/ECE385/final_project/workspace/mb_dino/Debug/mb_dino.elf
+----------------End of Script----------------
+
+15:04:57 INFO  : Context for processor 'microblaze_0' is selected.
+15:04:57 INFO  : 'con' command is executed.
+15:04:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+15:04:57 INFO  : Disconnected from the channel tcfchan#5.
+15:21:21 DEBUG : Logs will be stored at 'D:/U.I.U.C/FA24/ECE385/final_project/workspace/IDE.log'.
+15:21:22 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\U.I.U.C\FA24\ECE385\final_project\workspace\temp_xsdb_launch_script.tcl
+15:21:25 INFO  : XSCT server has started successfully.
+15:21:25 INFO  : Successfully done setting XSCT server connection channel  
+15:21:25 INFO  : plnx-install-location is set to ''
+15:21:25 INFO  : Successfully done setting workspace for the tool. 
+15:21:27 INFO  : Platform repository initialization has completed.
+15:21:27 INFO  : Successfully done query RDI_DATADIR 
+15:21:28 INFO  : Registering command handlers for Vitis TCF services
+15:21:36 INFO  : Hardware specification for platform project 'toplevel' is updated.
+15:21:49 INFO  : Result from executing command 'removePlatformRepo': 
+15:21:57 INFO  : Result from executing command 'getProjects': toplevel
+15:21:57 INFO  : Result from executing command 'getPlatforms': 
+15:21:58 INFO  : Checking for BSP changes to sync application flags for project 'mb_dino'...
+15:22:00 INFO  : The hardware specification used by project 'mb_dino' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+15:22:00 INFO  : The file 'D:\U.I.U.C\FA24\ECE385\final_project\workspace\mb_dino\_ide\bitstream\toplevel.bit' stored in project is removed.
+15:22:00 INFO  : The file 'D:\U.I.U.C\FA24\ECE385\final_project\workspace\mb_dino\_ide\bitstream\toplevel.mmi' stored in project is removed.
+15:22:00 INFO  : The updated bitstream files are copied from platform to folder 'D:\U.I.U.C\FA24\ECE385\final_project\workspace\mb_dino\_ide\bitstream' in project 'mb_dino'.
+15:22:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:22:10 INFO  : Jtag cable 'RealDigital Boo 887100000001A' is selected.
+15:22:10 INFO  : 'jtag frequency' command is executed.
+15:22:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+15:22:12 INFO  : Device configured successfully with "D:/U.I.U.C/FA24/ECE385/final_project/workspace/mb_dino/_ide/bitstream/toplevel.bit"
+15:22:12 INFO  : Context for processor 'microblaze_0' is selected.
+15:22:12 INFO  : Hardware design and registers information is loaded from 'D:/U.I.U.C/FA24/ECE385/final_project/workspace/toplevel/export/toplevel/hw/toplevel.xsa'.
+15:22:12 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:22:12 INFO  : Context for processor 'microblaze_0' is selected.
+15:22:12 INFO  : System reset is completed.
+15:22:15 INFO  : 'after 3000' command is executed.
+15:22:15 INFO  : Context for processor 'microblaze_0' is selected.
+15:22:15 INFO  : The application 'D:/U.I.U.C/FA24/ECE385/final_project/workspace/mb_dino/Debug/mb_dino.elf' is downloaded to processor 'microblaze_0'.
+15:22:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000001A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file D:/U.I.U.C/FA24/ECE385/final_project/workspace/mb_dino/_ide/bitstream/toplevel.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw D:/U.I.U.C/FA24/ECE385/final_project/workspace/toplevel/export/toplevel/hw/toplevel.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow D:/U.I.U.C/FA24/ECE385/final_project/workspace/mb_dino/Debug/mb_dino.elf
+----------------End of Script----------------
+
+15:22:16 INFO  : Context for processor 'microblaze_0' is selected.
+15:22:16 INFO  : 'con' command is executed.
+15:22:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+15:22:16 INFO  : Disconnected from the channel tcfchan#3.

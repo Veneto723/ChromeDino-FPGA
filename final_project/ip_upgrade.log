@@ -1,0 +1,79 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Sun Nov 10 15:12:32 2024
+| Host         : Zephyrus running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_hdmi_dino_controller_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of mb_block_hdmi_dino_controller_0_0 (xilinx.com:user:hdmi_dino_controller:1.0) from (Rev. 11) to (Rev. 12)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Sun Nov 10 15:10:32 2024
+| Host         : Zephyrus running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_hdmi_dino_controller_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of mb_block_hdmi_dino_controller_0_0 (xilinx.com:user:hdmi_dino_controller:1.0) from (Rev. 10) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Sun Nov 10 14:28:50 2024
+| Host         : Zephyrus running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_hdmi_dino_controller_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of mb_block_hdmi_dino_controller_0_0 (xilinx.com:user:hdmi_dino_controller:1.0) from (Rev. 9) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Sun Nov 10 14:04:54 2024
+| Host         : Zephyrus running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_hdmi_dino_controller_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of mb_block_hdmi_dino_controller_0_0 (xilinx.com:user:hdmi_dino_controller:1.0) from (Rev. 8) to (Rev. 9)
+
