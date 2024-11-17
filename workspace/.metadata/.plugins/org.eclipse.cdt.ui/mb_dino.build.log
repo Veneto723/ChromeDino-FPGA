@@ -1,75 +1,87 @@
-15:21:58 **** Build of configuration Debug for project mb_dino ****
+20:24:17 **** Build of configuration Debug for project mb_dino ****
 make all 
-'Building file: ../src/hdmi_text_controller.c'
+'Building file: ../src/lw_usb/HID.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/hdmi_text_controller.o" -ID:/U.I.U.C/FA24/ECE385/final_project/workspace/toplevel/export/toplevel/sw/toplevel/standalone_microblaze_0/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/hdmi_text_controller.d" -MT"src/hdmi_text_controller.o" -o "src/hdmi_text_controller.o" "../src/hdmi_text_controller.c"
-In file included from ../src/hdmi_text_controller.h:8,
-                 from ../src/hdmi_text_controller.c:4:
-D:/U.I.U.C/FA24/ECE385/final_project/workspace/toplevel/export/toplevel/sw/toplevel/standalone_microblaze_0/bspinclude/include/xparameters.h:627:50: warning: initialization of 'volatile struct TEXT_HDMI_STRUCT *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
-  627 | #define XPAR_HDMI_DINO_CONTROLLER_0_AXI_BASEADDR 0x44A00000
-      |                                                  ^~~~~~~~~~
-../src/hdmi_text_controller.h:31:54: note: in expansion of macro 'XPAR_HDMI_DINO_CONTROLLER_0_AXI_BASEADDR'
-   31 | static volatile struct TEXT_HDMI_STRUCT* hdmi_ctrl = XPAR_HDMI_DINO_CONTROLLER_0_AXI_BASEADDR;
-      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/hdmi_text_controller.c:96:1: warning: return type defaults to 'int' [-Wimplicit-int]
-   96 | hdmiTestWeek2()
-      | ^~~~~~~~~~~~~
-../src/hdmi_text_controller.c:96:1: warning: conflicting types for 'hdmiTestWeek2'
-In file included from ../src/hdmi_text_controller.c:4:
-../src/hdmi_text_controller.h:120:6: note: previous declaration of 'hdmiTestWeek2' with type 'void()'
-  120 | void hdmiTestWeek2(); //call this for your Week 2 demo
-      |      ^~~~~~~~~~~~~
-../src/hdmi_text_controller.c: In function 'hdmiTestWeek2':
-../src/hdmi_text_controller.c:119:46: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  119 |                 printf ("Row: %d, Checksum: %x, Read-back Checksum: %x\n\r", j, checksum[j], readsum[j]);
-      |                                             ~^                                  ~~~~~~~~~~~
-      |                                              |                                          |
-      |                                              unsigned int                               uint32_t {aka long unsigned int}
-      |                                             %lx
-../src/hdmi_text_controller.c:119:70: warning: format '%x' expects argument of type 'unsigned int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  119 |                 printf ("Row: %d, Checksum: %x, Read-back Checksum: %x\n\r", j, checksum[j], readsum[j]);
-      |                                                                     ~^                       ~~~~~~~~~~
-      |                                                                      |                              |
-      |                                                                      unsigned int                   uint32_t {aka long unsigned int}
-      |                                                                     %lx
-'Finished building: ../src/hdmi_text_controller.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lw_usb/HID.o" -ID:/U.I.U.C/FA24/ECE385/final_project/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lw_usb/HID.d" -MT"src/lw_usb/HID.o" -o "src/lw_usb/HID.o" "../src/lw_usb/HID.c"
+../src/lw_usb/HID.c:9:1: warning: braces around scalar initializer
+    9 | HID_DEVICE hid_device = { { 0 } };
+      | ^~~~~~~~~~
+../src/lw_usb/HID.c:9:1: note: (near initialization for 'hid_device.addr')
+'Finished building: ../src/lw_usb/HID.c'
 ' '
-'Building file: ../src/helloworld.c'
+'Building file: ../src/lw_usb/MAX3421E.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -ID:/U.I.U.C/FA24/ECE385/final_project/workspace/toplevel/export/toplevel/sw/toplevel/standalone_microblaze_0/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-In file included from D:/U.I.U.C/FA24/ECE385/final_project/workspace/toplevel/export/toplevel/sw/toplevel/standalone_microblaze_0/bspinclude/include/xil_printf.h:16,
-                 from ../src/helloworld.c:50:
-D:/U.I.U.C/FA24/ECE385/final_project/workspace/toplevel/export/toplevel/sw/toplevel/standalone_microblaze_0/bspinclude/include/xparameters.h:627:50: warning: initialization of 'volatile struct TEXT_HDMI_STRUCT *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
-  627 | #define XPAR_HDMI_DINO_CONTROLLER_0_AXI_BASEADDR 0x44A00000
-      |                                                  ^~~~~~~~~~
-../src/hdmi_text_controller.h:31:54: note: in expansion of macro 'XPAR_HDMI_DINO_CONTROLLER_0_AXI_BASEADDR'
-   31 | static volatile struct TEXT_HDMI_STRUCT* hdmi_ctrl = XPAR_HDMI_DINO_CONTROLLER_0_AXI_BASEADDR;
-      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from ../src/helloworld.c:51:
-../src/hdmi_text_controller.h:34:21: warning: 'colors' defined but not used [-Wunused-variable]
-   34 | static struct COLOR colors[]={
-      |                     ^~~~~~
-../src/hdmi_text_controller.h:31:42: warning: 'hdmi_ctrl' defined but not used [-Wunused-variable]
-   31 | static volatile struct TEXT_HDMI_STRUCT* hdmi_ctrl = XPAR_HDMI_DINO_CONTROLLER_0_AXI_BASEADDR;
-      |                                          ^~~~~~~~~
-'Finished building: ../src/helloworld.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lw_usb/MAX3421E.o" -ID:/U.I.U.C/FA24/ECE385/final_project/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lw_usb/MAX3421E.d" -MT"src/lw_usb/MAX3421E.o" -o "src/lw_usb/MAX3421E.o" "../src/lw_usb/MAX3421E.c"
+In file included from D:/U.I.U.C/FA24/ECE385/final_project/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include/xspi.h:303,
+                 from ../src/lw_usb/MAX3421E.c:14:
+../src/lw_usb/MAX3421E.c: In function 'SPI_init':
+D:/U.I.U.C/FA24/ECE385/final_project/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include/xstatus.h:44:41: warning: 'return' with a value, in function returning void [-Wreturn-type]
+   44 | #define XST_DEVICE_NOT_FOUND            2L
+      |                                         ^~
+../src/lw_usb/MAX3421E.c:40:24: note: in expansion of macro 'XST_DEVICE_NOT_FOUND'
+   40 |                 return XST_DEVICE_NOT_FOUND;
+      |                        ^~~~~~~~~~~~~~~~~~~~
+../src/lw_usb/MAX3421E.c:34:6: note: declared here
+   34 | void SPI_init() {
+      |      ^~~~~~~~
+In file included from D:/U.I.U.C/FA24/ECE385/final_project/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include/xspi.h:303,
+                 from ../src/lw_usb/MAX3421E.c:14:
+D:/U.I.U.C/FA24/ECE385/final_project/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include/xstatus.h:43:41: warning: 'return' with a value, in function returning void [-Wreturn-type]
+   43 | #define XST_FAILURE                     1L
+      |                                         ^~
+../src/lw_usb/MAX3421E.c:46:24: note: in expansion of macro 'XST_FAILURE'
+   46 |                 return XST_FAILURE;
+      |                        ^~~~~~~~~~~
+../src/lw_usb/MAX3421E.c:34:6: note: declared here
+   34 | void SPI_init() {
+      |      ^~~~~~~~
+../src/lw_usb/MAX3421E.c: In function 'MAX3421E_Task':
+../src/lw_usb/MAX3421E.c:304:46: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+  304 |         if (XGpio_DiscreteRead(&Gpio_int, 1) & 0x01 == 0) {
+      |                                              ^
+../src/lw_usb/MAX3421E.c: In function 'MaxGpxHandler':
+../src/lw_usb/MAX3421E.c:340:14: warning: variable 'GPINIRQ' set but not used [-Wunused-but-set-variable]
+  340 |         BYTE GPINIRQ;
+      |              ^~~~~~~
+'Finished building: ../src/lw_usb/MAX3421E.c'
+' '
+'Building file: ../src/lw_usb/transfer.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lw_usb/transfer.o" -ID:/U.I.U.C/FA24/ECE385/final_project/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lw_usb/transfer.d" -MT"src/lw_usb/transfer.o" -o "src/lw_usb/transfer.o" "../src/lw_usb/transfer.c"
+../src/lw_usb/transfer.c:13:1: warning: braces around scalar initializer
+   13 | EP_RECORD dev0ep = {{ 0 }};         //Endpoint data structure for uninitialized device during enumeration
+      | ^~~~~~~~~
+../src/lw_usb/transfer.c:13:1: note: (near initialization for 'dev0ep.epAddr')
+../src/lw_usb/transfer.c: In function 'XferInTransfer':
+../src/lw_usb/transfer.c:199:7: warning: unused variable 'tmpbyte' [-Wunused-variable]
+  199 |  BYTE tmpbyte;
+      |       ^~~~~~~
+../src/lw_usb/transfer.c:198:7: warning: unused variable 'i' [-Wunused-variable]
+  198 |  BYTE i;
+      |       ^
+'Finished building: ../src/lw_usb/transfer.c'
+' '
+'Building file: ../src/lw_usb_main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lw_usb_main.o" -ID:/U.I.U.C/FA24/ECE385/final_project/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lw_usb_main.d" -MT"src/lw_usb_main.o" -o "src/lw_usb_main.o" "../src/lw_usb_main.c"
+'Finished building: ../src/lw_usb_main.c'
 ' '
 'Building file: ../src/platform.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -ID:/U.I.U.C/FA24/ECE385/final_project/workspace/toplevel/export/toplevel/sw/toplevel/standalone_microblaze_0/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -ID:/U.I.U.C/FA24/ECE385/final_project/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
 'Finished building: ../src/platform.c'
 ' '
 'Building target: mb_dino.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -LD:/U.I.U.C/FA24/ECE385/final_project/workspace/toplevel/export/toplevel/sw/toplevel/standalone_microblaze_0/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mb_dino.elf"  ./src/hdmi_text_controller.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LD:/U.I.U.C/FA24/ECE385/final_project/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mb_dino.elf"  ./src/lw_usb/HID.o ./src/lw_usb/MAX3421E.o ./src/lw_usb/transfer.o  ./src/lw_usb_main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: mb_dino.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size mb_dino.elf  |tee "mb_dino.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  85484	   2120	   3172	  90776	  16298	mb_dino.elf
+  24960	    488	   3672	  29120	   71c0	mb_dino.elf
 'Finished building: mb_dino.elf.size'
 ' '
 
-15:22:00 Build Finished (took 1s.709ms)
+20:24:19 Build Finished (took 1s.897ms)
 

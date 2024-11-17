@@ -1,19 +1,495 @@
-timestamp=[2024-11-10 14:41:42], mode=WORKBENCH_START, duration=0:00:06.856, duration_ms=6856, data={}
-timestamp=[2024-11-10 14:41:43], mode=WORKBENCH_UI_INIT, duration=0:00:00.784, duration_ms=784, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
-timestamp=[2024-11-10 14:41:44], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.111, duration_ms=111, data={}
-timestamp=[2024-11-10 14:42:45], mode=APP_CREATION, duration=0:00:04.753, duration_ms=4753, data={name=mb_dino, project_type=sdk, os=standalone, processor=microblaze, runtime=cpp, platform=toplevel, application_type=application}
-timestamp=[2024-11-10 14:44:54], mode=PLATFORM_GENERATION, duration=0:00:06.325, duration_ms=6325, data={name=toplevel}
-timestamp=[2024-11-10 14:44:54], mode=BUILD, duration=0:00:00.618, duration_ms=618, data={name=mb_dino, configuration=Debug, clean_build=false}
-timestamp=[2024-11-10 14:45:39], mode=BUILD, duration=0:00:01.873, duration_ms=1873, data={name=mb_dino, configuration=Debug, clean_build=false}
-timestamp=[2024-11-10 15:04:16], mode=BUILD, duration=0:00:00.271, duration_ms=271, data={name=mb_dino, configuration=Debug, clean_build=true}
-timestamp=[2024-11-10 15:04:20], mode=PLATFORM_GENERATION, duration=0:00:03.849, duration_ms=3849, data={name=toplevel}
-timestamp=[2024-11-10 15:04:44], mode=PLATFORM_GENERATION, duration=0:00:05.626, duration_ms=5626, data={name=toplevel}
-timestamp=[2024-11-10 15:04:46], mode=BUILD, duration=0:00:01.718, duration_ms=1718, data={name=mb_dino, configuration=Debug, clean_build=false}
-timestamp=[2024-11-10 15:21:25], mode=WORKBENCH_START, duration=0:00:09.209, duration_ms=9209, data={}
-timestamp=[2024-11-10 15:21:26], mode=WORKBENCH_UI_INIT, duration=0:00:01.016, duration_ms=1016, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,mb_dino,mb_dino_system,toplevel}
-timestamp=[2024-11-10 15:21:27], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.024, duration_ms=24, data={}
-timestamp=[2024-11-10 15:21:47], mode=BUILD, duration=0:00:00.254, duration_ms=254, data={name=mb_dino, configuration=Debug, clean_build=true}
-timestamp=[2024-11-10 15:21:50], mode=PLATFORM_GENERATION, duration=0:00:03.647, duration_ms=3647, data={name=toplevel}
-timestamp=[2024-11-10 15:21:58], mode=PLATFORM_GENERATION, duration=0:00:07.228, duration_ms=7228, data={name=toplevel}
-timestamp=[2024-11-10 15:22:00], mode=BUILD, duration=0:00:01.727, duration_ms=1727, data={name=mb_dino, configuration=Debug, clean_build=false}
-timestamp=[2024-11-10 15:22:01], mode=BUILD, duration=0:00:00.240, duration_ms=240, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-12 12:10:08], mode=WORKBENCH_START, duration=0:00:06.351, duration_ms=6351, data={}
+timestamp=[2024-11-12 12:10:08], mode=WORKBENCH_UI_INIT, duration=0:00:00.460, duration_ms=460, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2024-11-12 12:10:09], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.085, duration_ms=85, data={}
+timestamp=[2024-11-12 12:10:34], mode=APP_CREATION, duration=0:00:04.329, duration_ms=4329, data={name=mb_dino, project_type=sdk, os=standalone, processor=microblaze, runtime=cpp, platform=mb_usb_hdmi_top, application_type=application}
+timestamp=[2024-11-12 12:10:58], mode=PLATFORM_GENERATION, duration=0:00:05.883, duration_ms=5883, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-12 12:11:01], mode=BUILD, duration=0:00:02.196, duration_ms=2196, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-12 22:18:01], mode=WORKBENCH_START, duration=0:00:12.364, duration_ms=12364, data={}
+timestamp=[2024-11-12 22:18:03], mode=WORKBENCH_UI_INIT, duration=0:00:01.540, duration_ms=1540, data={editors_count=1, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,mb_dino,mb_dino_system,mb_usb_hdmi_top}
+timestamp=[2024-11-12 22:18:03], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.095, duration_ms=95, data={}
+timestamp=[2024-11-12 22:18:40], mode=BUILD, duration=0:00:00.806, duration_ms=806, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-12 22:18:45], mode=PLATFORM_GENERATION, duration=0:00:04.973, duration_ms=4973, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-12 22:18:56], mode=PLATFORM_GENERATION, duration=0:00:10.836, duration_ms=10836, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-12 22:18:58], mode=BUILD, duration=0:00:01.731, duration_ms=1731, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-12 22:18:59], mode=BUILD, duration=0:00:00.245, duration_ms=245, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-12 22:28:42], mode=PLATFORM_GENERATION, duration=0:00:08.524, duration_ms=8524, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-12 22:28:50], mode=BUILD, duration=0:00:00.276, duration_ms=276, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-12 22:28:51], mode=BUILD, duration=0:00:00.195, duration_ms=195, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-12 22:28:55], mode=PLATFORM_GENERATION, duration=0:00:04.257, duration_ms=4257, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-12 22:29:01], mode=PLATFORM_GENERATION, duration=0:00:06.361, duration_ms=6361, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-12 22:29:03], mode=BUILD, duration=0:00:01.384, duration_ms=1384, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-12 22:29:04], mode=BUILD, duration=0:00:00.206, duration_ms=206, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-12 22:35:18], mode=WORKBENCH_START, duration=0:00:15.268, duration_ms=15268, data={}
+timestamp=[2024-11-12 22:35:21], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.053, duration_ms=53, data={}
+timestamp=[2024-11-12 22:35:21], mode=WORKBENCH_UI_INIT, duration=0:00:02.689, duration_ms=2689, data={editors_count=1, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,mb_dino,mb_dino_system,mb_usb_hdmi_top}
+timestamp=[2024-11-12 22:37:03], mode=BUILD, duration=0:00:00.364, duration_ms=364, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-12 22:37:03], mode=BUILD, duration=0:00:00.224, duration_ms=224, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-12 22:37:08], mode=PLATFORM_GENERATION, duration=0:00:04.957, duration_ms=4957, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-12 22:37:18], mode=PLATFORM_GENERATION, duration=0:00:09.378, duration_ms=9378, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-12 22:37:21], mode=BUILD, duration=0:00:01.786, duration_ms=1786, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-12 22:37:21], mode=BUILD, duration=0:00:00.216, duration_ms=216, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-12 22:39:02], mode=BUILD, duration=0:00:00.282, duration_ms=282, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-12 22:39:02], mode=BUILD, duration=0:00:00.209, duration_ms=209, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-12 22:39:07], mode=PLATFORM_GENERATION, duration=0:00:04.801, duration_ms=4801, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-12 22:39:17], mode=PLATFORM_GENERATION, duration=0:00:10.180, duration_ms=10180, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-12 22:39:20], mode=BUILD, duration=0:00:01.719, duration_ms=1719, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-12 22:39:20], mode=BUILD, duration=0:00:00.217, duration_ms=217, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-13 23:21:08], mode=WORKBENCH_START, duration=0:00:13.540, duration_ms=13540, data={}
+timestamp=[2024-11-13 23:21:10], mode=WORKBENCH_UI_INIT, duration=0:00:01.778, duration_ms=1778, data={editors_count=1, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,mb_dino,mb_dino_system,mb_usb_hdmi_top}
+timestamp=[2024-11-13 23:21:10], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.120, duration_ms=120, data={}
+timestamp=[2024-11-13 23:26:01], mode=BUILD, duration=0:00:00.839, duration_ms=839, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-13 23:26:02], mode=BUILD, duration=0:00:00.203, duration_ms=203, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-13 23:26:10], mode=PLATFORM_GENERATION, duration=0:00:08.059, duration_ms=8059, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-13 23:26:20], mode=PLATFORM_GENERATION, duration=0:00:09.374, duration_ms=9374, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-13 23:26:23], mode=BUILD, duration=0:00:03.133, duration_ms=3133, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-13 23:26:24], mode=BUILD, duration=0:00:00.211, duration_ms=211, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-13 23:27:57], mode=BUILD, duration=0:00:01.079, duration_ms=1079, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-14 21:35:02], mode=WORKBENCH_START, duration=0:00:13.479, duration_ms=13479, data={}
+timestamp=[2024-11-14 21:35:04], mode=WORKBENCH_UI_INIT, duration=0:00:01.880, duration_ms=1880, data={editors_count=2, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,mb_dino,mb_dino_system,mb_usb_hdmi_top}
+timestamp=[2024-11-14 21:35:04], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.155, duration_ms=155, data={}
+timestamp=[2024-11-15 13:10:53], mode=WORKBENCH_START, duration=0:00:09.074, duration_ms=9074, data={}
+timestamp=[2024-11-15 13:10:54], mode=WORKBENCH_UI_INIT, duration=0:00:00.975, duration_ms=975, data={editors_count=3, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,mb_dino,mb_dino_system,mb_usb_hdmi_top}
+timestamp=[2024-11-15 13:10:55], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.073, duration_ms=73, data={}
+timestamp=[2024-11-15 13:11:28], mode=BUILD, duration=0:00:00.783, duration_ms=783, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 13:11:28], mode=BUILD, duration=0:00:00.199, duration_ms=199, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 13:11:33], mode=PLATFORM_GENERATION, duration=0:00:04.267, duration_ms=4267, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 13:11:41], mode=PLATFORM_GENERATION, duration=0:00:08.484, duration_ms=8484, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 13:11:44], mode=BUILD, duration=0:00:02.585, duration_ms=2585, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 13:11:45], mode=BUILD, duration=0:00:00.163, duration_ms=163, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 15:22:31], mode=WORKBENCH_START, duration=0:00:11.542, duration_ms=11542, data={}
+timestamp=[2024-11-15 15:22:32], mode=WORKBENCH_UI_INIT, duration=0:00:01.162, duration_ms=1162, data={editors_count=3, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,mb_dino,mb_dino_system,mb_usb_hdmi_top}
+timestamp=[2024-11-15 15:22:36], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.098, duration_ms=98, data={}
+timestamp=[2024-11-15 15:36:26], mode=BUILD, duration=0:00:00.492, duration_ms=492, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 15:36:27], mode=BUILD, duration=0:00:00.277, duration_ms=277, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 15:36:32], mode=PLATFORM_GENERATION, duration=0:00:05.775, duration_ms=5775, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 15:36:42], mode=PLATFORM_GENERATION, duration=0:00:09.017, duration_ms=9017, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 15:36:45], mode=BUILD, duration=0:00:02.910, duration_ms=2910, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 15:36:46], mode=BUILD, duration=0:00:00.198, duration_ms=198, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 16:14:35], mode=BUILD, duration=0:00:00.282, duration_ms=282, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 16:14:36], mode=BUILD, duration=0:00:00.193, duration_ms=193, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 16:14:40], mode=PLATFORM_GENERATION, duration=0:00:04.108, duration_ms=4108, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 16:14:48], mode=PLATFORM_GENERATION, duration=0:00:08.120, duration_ms=8120, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 16:14:51], mode=BUILD, duration=0:00:02.226, duration_ms=2226, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 16:14:51], mode=BUILD, duration=0:00:00.128, duration_ms=128, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 16:52:23], mode=BUILD, duration=0:00:00.278, duration_ms=278, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 16:52:23], mode=BUILD, duration=0:00:00.197, duration_ms=197, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 16:52:28], mode=PLATFORM_GENERATION, duration=0:00:04.317, duration_ms=4317, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 16:52:37], mode=PLATFORM_GENERATION, duration=0:00:08.866, duration_ms=8866, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 16:52:40], mode=BUILD, duration=0:00:02.336, duration_ms=2336, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 16:52:40], mode=BUILD, duration=0:00:00.201, duration_ms=201, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 16:58:45], mode=BUILD, duration=0:00:00.279, duration_ms=279, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 16:58:45], mode=BUILD, duration=0:00:00.214, duration_ms=214, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 16:58:49], mode=PLATFORM_GENERATION, duration=0:00:04.004, duration_ms=4004, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 16:58:58], mode=PLATFORM_GENERATION, duration=0:00:07.900, duration_ms=7900, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 16:59:00], mode=BUILD, duration=0:00:02.212, duration_ms=2212, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 16:59:01], mode=BUILD, duration=0:00:00.201, duration_ms=201, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 18:13:42], mode=BUILD, duration=0:00:00.369, duration_ms=369, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 18:13:43], mode=BUILD, duration=0:00:00.212, duration_ms=212, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 18:13:48], mode=PLATFORM_GENERATION, duration=0:00:05.032, duration_ms=5032, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 18:13:59], mode=PLATFORM_GENERATION, duration=0:00:10.871, duration_ms=10871, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 18:14:02], mode=BUILD, duration=0:00:02.720, duration_ms=2720, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 18:14:03], mode=BUILD, duration=0:00:00.227, duration_ms=227, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 18:25:57], mode=BUILD, duration=0:00:00.276, duration_ms=276, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 18:25:58], mode=BUILD, duration=0:00:00.209, duration_ms=209, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 18:26:02], mode=PLATFORM_GENERATION, duration=0:00:04.103, duration_ms=4103, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 18:26:10], mode=PLATFORM_GENERATION, duration=0:00:07.913, duration_ms=7913, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 18:26:12], mode=BUILD, duration=0:00:02.103, duration_ms=2103, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 18:26:13], mode=BUILD, duration=0:00:00.142, duration_ms=142, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 18:43:25], mode=BUILD, duration=0:00:00.286, duration_ms=286, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 18:43:25], mode=BUILD, duration=0:00:00.194, duration_ms=194, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 18:43:29], mode=PLATFORM_GENERATION, duration=0:00:04.255, duration_ms=4255, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 18:43:38], mode=PLATFORM_GENERATION, duration=0:00:08.499, duration_ms=8499, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 18:43:40], mode=BUILD, duration=0:00:02.215, duration_ms=2215, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 18:43:41], mode=BUILD, duration=0:00:00.198, duration_ms=198, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 18:59:25], mode=BUILD, duration=0:00:00.341, duration_ms=341, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 18:59:26], mode=BUILD, duration=0:00:00.204, duration_ms=204, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 18:59:30], mode=PLATFORM_GENERATION, duration=0:00:04.098, duration_ms=4098, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 18:59:38], mode=PLATFORM_GENERATION, duration=0:00:07.861, duration_ms=7861, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 18:59:40], mode=BUILD, duration=0:00:02.068, duration_ms=2068, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 18:59:41], mode=BUILD, duration=0:00:00.146, duration_ms=146, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 19:16:30], mode=BUILD, duration=0:00:00.284, duration_ms=284, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 19:16:30], mode=BUILD, duration=0:00:00.211, duration_ms=211, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 19:16:34], mode=PLATFORM_GENERATION, duration=0:00:04.295, duration_ms=4295, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 19:16:43], mode=PLATFORM_GENERATION, duration=0:00:08.304, duration_ms=8304, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 19:16:46], mode=BUILD, duration=0:00:02.355, duration_ms=2355, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 19:16:46], mode=BUILD, duration=0:00:00.214, duration_ms=214, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 19:24:16], mode=BUILD, duration=0:00:00.271, duration_ms=271, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 19:24:16], mode=BUILD, duration=0:00:00.210, duration_ms=210, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 19:24:20], mode=PLATFORM_GENERATION, duration=0:00:04.151, duration_ms=4151, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 19:24:29], mode=PLATFORM_GENERATION, duration=0:00:07.917, duration_ms=7917, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 19:24:31], mode=BUILD, duration=0:00:02.060, duration_ms=2060, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 19:24:32], mode=BUILD, duration=0:00:00.205, duration_ms=205, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 19:36:28], mode=BUILD, duration=0:00:00.264, duration_ms=264, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 19:36:29], mode=BUILD, duration=0:00:00.213, duration_ms=213, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 19:36:33], mode=PLATFORM_GENERATION, duration=0:00:04.243, duration_ms=4243, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 19:36:41], mode=PLATFORM_GENERATION, duration=0:00:07.801, duration_ms=7801, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 19:36:43], mode=BUILD, duration=0:00:02.073, duration_ms=2073, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 19:36:44], mode=BUILD, duration=0:00:00.139, duration_ms=139, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 19:45:08], mode=BUILD, duration=0:00:00.279, duration_ms=279, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 19:45:08], mode=BUILD, duration=0:00:00.205, duration_ms=205, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 19:45:12], mode=PLATFORM_GENERATION, duration=0:00:04.235, duration_ms=4235, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 19:45:21], mode=PLATFORM_GENERATION, duration=0:00:08.516, duration_ms=8516, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 19:45:23], mode=BUILD, duration=0:00:02.247, duration_ms=2247, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 19:45:24], mode=BUILD, duration=0:00:00.140, duration_ms=140, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 19:52:13], mode=BUILD, duration=0:00:00.274, duration_ms=274, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 19:52:13], mode=BUILD, duration=0:00:00.209, duration_ms=209, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 19:52:18], mode=PLATFORM_GENERATION, duration=0:00:04.359, duration_ms=4359, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 19:52:26], mode=PLATFORM_GENERATION, duration=0:00:07.905, duration_ms=7905, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 19:52:28], mode=BUILD, duration=0:00:02.068, duration_ms=2068, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 19:52:29], mode=BUILD, duration=0:00:00.228, duration_ms=228, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 20:03:50], mode=BUILD, duration=0:00:00.271, duration_ms=271, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 20:03:50], mode=BUILD, duration=0:00:00.210, duration_ms=210, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 20:03:54], mode=PLATFORM_GENERATION, duration=0:00:04.161, duration_ms=4161, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 20:04:02], mode=PLATFORM_GENERATION, duration=0:00:08.096, duration_ms=8096, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 20:04:05], mode=BUILD, duration=0:00:02.161, duration_ms=2161, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 20:04:05], mode=BUILD, duration=0:00:00.156, duration_ms=156, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 20:14:26], mode=BUILD, duration=0:00:00.274, duration_ms=274, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 20:14:26], mode=BUILD, duration=0:00:00.196, duration_ms=196, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 20:14:30], mode=PLATFORM_GENERATION, duration=0:00:03.969, duration_ms=3969, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 20:14:38], mode=PLATFORM_GENERATION, duration=0:00:07.931, duration_ms=7931, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 20:14:41], mode=BUILD, duration=0:00:02.140, duration_ms=2140, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 20:14:41], mode=BUILD, duration=0:00:00.208, duration_ms=208, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 20:21:47], mode=BUILD, duration=0:00:00.278, duration_ms=278, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 20:21:48], mode=BUILD, duration=0:00:00.196, duration_ms=196, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 20:21:52], mode=PLATFORM_GENERATION, duration=0:00:04.062, duration_ms=4062, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 20:22:00], mode=PLATFORM_GENERATION, duration=0:00:08.100, duration_ms=8100, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 20:22:02], mode=BUILD, duration=0:00:02.102, duration_ms=2102, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 20:22:03], mode=BUILD, duration=0:00:00.137, duration_ms=137, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 20:35:39], mode=BUILD, duration=0:00:00.293, duration_ms=293, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 20:35:39], mode=BUILD, duration=0:00:00.336, duration_ms=336, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 20:35:43], mode=PLATFORM_GENERATION, duration=0:00:04.153, duration_ms=4153, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 20:35:52], mode=PLATFORM_GENERATION, duration=0:00:08.223, duration_ms=8223, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 20:35:54], mode=BUILD, duration=0:00:02.069, duration_ms=2069, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 20:35:55], mode=BUILD, duration=0:00:00.201, duration_ms=201, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 20:43:33], mode=BUILD, duration=0:00:00.274, duration_ms=274, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 20:43:33], mode=BUILD, duration=0:00:00.210, duration_ms=210, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 20:43:38], mode=PLATFORM_GENERATION, duration=0:00:04.283, duration_ms=4283, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 20:43:46], mode=PLATFORM_GENERATION, duration=0:00:08.318, duration_ms=8318, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 20:43:49], mode=BUILD, duration=0:00:02.291, duration_ms=2291, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 20:43:49], mode=BUILD, duration=0:00:00.145, duration_ms=145, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 20:50:18], mode=PLATFORM_GENERATION, duration=0:00:09.697, duration_ms=9697, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 20:56:47], mode=BUILD, duration=0:00:00.282, duration_ms=282, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 20:56:48], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 20:56:52], mode=PLATFORM_GENERATION, duration=0:00:04.180, duration_ms=4180, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 20:57:00], mode=PLATFORM_GENERATION, duration=0:00:08.247, duration_ms=8247, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 20:57:03], mode=BUILD, duration=0:00:02.120, duration_ms=2120, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 20:57:03], mode=BUILD, duration=0:00:00.138, duration_ms=138, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 21:09:00], mode=BUILD, duration=0:00:00.265, duration_ms=265, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 21:09:00], mode=BUILD, duration=0:00:00.196, duration_ms=196, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 21:09:04], mode=PLATFORM_GENERATION, duration=0:00:04.051, duration_ms=4051, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 21:09:12], mode=PLATFORM_GENERATION, duration=0:00:07.872, duration_ms=7872, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 21:09:15], mode=BUILD, duration=0:00:02.103, duration_ms=2103, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 21:09:15], mode=BUILD, duration=0:00:00.141, duration_ms=141, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 21:18:36], mode=BUILD, duration=0:00:00.265, duration_ms=265, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 21:18:37], mode=BUILD, duration=0:00:00.213, duration_ms=213, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 21:18:41], mode=PLATFORM_GENERATION, duration=0:00:04.042, duration_ms=4042, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 21:18:49], mode=PLATFORM_GENERATION, duration=0:00:08.230, duration_ms=8230, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 21:18:51], mode=BUILD, duration=0:00:02.086, duration_ms=2086, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 21:18:52], mode=BUILD, duration=0:00:00.145, duration_ms=145, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 21:30:24], mode=BUILD, duration=0:00:00.271, duration_ms=271, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 21:30:25], mode=BUILD, duration=0:00:00.196, duration_ms=196, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 21:30:29], mode=PLATFORM_GENERATION, duration=0:00:04.379, duration_ms=4379, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 21:30:37], mode=PLATFORM_GENERATION, duration=0:00:07.811, duration_ms=7811, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 21:30:39], mode=BUILD, duration=0:00:02.037, duration_ms=2037, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 21:30:40], mode=BUILD, duration=0:00:00.217, duration_ms=217, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 21:43:19], mode=BUILD, duration=0:00:00.276, duration_ms=276, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 21:43:19], mode=BUILD, duration=0:00:00.208, duration_ms=208, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-15 21:43:24], mode=PLATFORM_GENERATION, duration=0:00:04.694, duration_ms=4694, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 21:43:35], mode=PLATFORM_GENERATION, duration=0:00:10.576, duration_ms=10576, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-15 21:43:38], mode=BUILD, duration=0:00:02.614, duration_ms=2614, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 21:43:39], mode=BUILD, duration=0:00:00.213, duration_ms=213, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 09:28:58], mode=WORKBENCH_START, duration=0:00:10.366, duration_ms=10366, data={}
+timestamp=[2024-11-16 09:28:59], mode=WORKBENCH_UI_INIT, duration=0:00:00.937, duration_ms=937, data={editors_count=2, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,mb_dino,mb_dino_system,mb_usb_hdmi_top}
+timestamp=[2024-11-16 09:28:59], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.084, duration_ms=84, data={}
+timestamp=[2024-11-16 09:29:26], mode=BUILD, duration=0:00:00.694, duration_ms=694, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 09:29:26], mode=BUILD, duration=0:00:00.232, duration_ms=232, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 09:29:31], mode=PLATFORM_GENERATION, duration=0:00:05.490, duration_ms=5490, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 09:29:42], mode=PLATFORM_GENERATION, duration=0:00:09.724, duration_ms=9724, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 09:29:45], mode=BUILD, duration=0:00:02.847, duration_ms=2847, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 09:29:46], mode=BUILD, duration=0:00:00.269, duration_ms=269, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 09:46:09], mode=BUILD, duration=0:00:00.288, duration_ms=288, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 09:46:09], mode=BUILD, duration=0:00:00.238, duration_ms=238, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 09:46:13], mode=PLATFORM_GENERATION, duration=0:00:03.659, duration_ms=3659, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 09:46:20], mode=PLATFORM_GENERATION, duration=0:00:07.351, duration_ms=7351, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 09:46:23], mode=BUILD, duration=0:00:02.457, duration_ms=2457, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 09:46:23], mode=BUILD, duration=0:00:00.150, duration_ms=150, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 09:53:56], mode=BUILD, duration=0:00:00.293, duration_ms=293, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 09:53:56], mode=BUILD, duration=0:00:00.201, duration_ms=201, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 09:54:00], mode=PLATFORM_GENERATION, duration=0:00:03.791, duration_ms=3791, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 09:54:07], mode=PLATFORM_GENERATION, duration=0:00:07.231, duration_ms=7231, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 09:54:10], mode=BUILD, duration=0:00:02.005, duration_ms=2005, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 09:54:10], mode=BUILD, duration=0:00:00.136, duration_ms=136, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 10:03:20], mode=BUILD, duration=0:00:00.279, duration_ms=279, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 10:03:20], mode=BUILD, duration=0:00:00.228, duration_ms=228, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 10:03:24], mode=PLATFORM_GENERATION, duration=0:00:04.226, duration_ms=4226, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 10:03:33], mode=PLATFORM_GENERATION, duration=0:00:08.104, duration_ms=8104, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 10:03:35], mode=BUILD, duration=0:00:02.097, duration_ms=2097, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 10:03:36], mode=BUILD, duration=0:00:00.217, duration_ms=217, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 10:03:58], mode=BUILD, duration=0:00:00.282, duration_ms=282, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 10:03:58], mode=BUILD, duration=0:00:00.228, duration_ms=228, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 10:04:02], mode=PLATFORM_GENERATION, duration=0:00:04.096, duration_ms=4096, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 10:04:08], mode=PLATFORM_GENERATION, duration=0:00:06.009, duration_ms=6009, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 10:04:10], mode=BUILD, duration=0:00:02.004, duration_ms=2004, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 10:04:11], mode=BUILD, duration=0:00:00.168, duration_ms=168, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 10:07:53], mode=BUILD, duration=0:00:00.267, duration_ms=267, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 10:07:53], mode=BUILD, duration=0:00:00.198, duration_ms=198, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 10:07:57], mode=PLATFORM_GENERATION, duration=0:00:03.653, duration_ms=3653, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 10:08:05], mode=PLATFORM_GENERATION, duration=0:00:07.640, duration_ms=7640, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 10:08:07], mode=BUILD, duration=0:00:01.941, duration_ms=1941, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 10:08:07], mode=BUILD, duration=0:00:00.133, duration_ms=133, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 10:13:24], mode=BUILD, duration=0:00:00.274, duration_ms=274, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 10:13:25], mode=BUILD, duration=0:00:00.197, duration_ms=197, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 10:13:28], mode=PLATFORM_GENERATION, duration=0:00:03.740, duration_ms=3740, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 10:13:36], mode=PLATFORM_GENERATION, duration=0:00:07.099, duration_ms=7099, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 10:13:38], mode=BUILD, duration=0:00:01.868, duration_ms=1868, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 10:13:38], mode=BUILD, duration=0:00:00.134, duration_ms=134, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 10:20:53], mode=BUILD, duration=0:00:00.265, duration_ms=265, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 10:20:54], mode=BUILD, duration=0:00:00.238, duration_ms=238, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 10:20:57], mode=PLATFORM_GENERATION, duration=0:00:03.710, duration_ms=3710, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 10:21:05], mode=PLATFORM_GENERATION, duration=0:00:07.651, duration_ms=7651, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 10:21:07], mode=BUILD, duration=0:00:02.039, duration_ms=2039, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 10:21:08], mode=BUILD, duration=0:00:00.217, duration_ms=217, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 10:29:16], mode=BUILD, duration=0:00:00.264, duration_ms=264, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 10:29:16], mode=BUILD, duration=0:00:00.195, duration_ms=195, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 10:29:20], mode=PLATFORM_GENERATION, duration=0:00:03.671, duration_ms=3671, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 10:29:27], mode=PLATFORM_GENERATION, duration=0:00:06.906, duration_ms=6906, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 10:29:29], mode=BUILD, duration=0:00:01.860, duration_ms=1860, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 10:29:30], mode=BUILD, duration=0:00:00.197, duration_ms=197, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 10:36:02], mode=BUILD, duration=0:00:00.262, duration_ms=262, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 10:36:02], mode=BUILD, duration=0:00:00.199, duration_ms=199, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 10:36:06], mode=PLATFORM_GENERATION, duration=0:00:04.331, duration_ms=4331, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 10:36:15], mode=PLATFORM_GENERATION, duration=0:00:08.281, duration_ms=8281, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 10:36:17], mode=BUILD, duration=0:00:01.924, duration_ms=1924, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 10:36:18], mode=BUILD, duration=0:00:00.135, duration_ms=135, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 10:50:19], mode=BUILD, duration=0:00:00.275, duration_ms=275, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 10:50:19], mode=BUILD, duration=0:00:00.246, duration_ms=246, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 10:50:22], mode=PLATFORM_GENERATION, duration=0:00:03.635, duration_ms=3635, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 10:50:29], mode=PLATFORM_GENERATION, duration=0:00:06.972, duration_ms=6972, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 10:50:32], mode=BUILD, duration=0:00:02.007, duration_ms=2007, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 10:50:32], mode=BUILD, duration=0:00:00.152, duration_ms=152, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 10:59:17], mode=BUILD, duration=0:00:00.261, duration_ms=261, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 10:59:17], mode=BUILD, duration=0:00:00.150, duration_ms=150, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 10:59:20], mode=PLATFORM_GENERATION, duration=0:00:03.578, duration_ms=3578, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 10:59:27], mode=PLATFORM_GENERATION, duration=0:00:06.810, duration_ms=6810, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 10:59:29], mode=BUILD, duration=0:00:01.975, duration_ms=1975, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 10:59:30], mode=BUILD, duration=0:00:00.139, duration_ms=139, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 11:42:45], mode=BUILD, duration=0:00:00.279, duration_ms=279, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 11:42:45], mode=BUILD, duration=0:00:00.212, duration_ms=212, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 11:42:49], mode=PLATFORM_GENERATION, duration=0:00:03.934, duration_ms=3934, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 11:42:57], mode=PLATFORM_GENERATION, duration=0:00:07.545, duration_ms=7545, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 11:42:59], mode=BUILD, duration=0:00:02.004, duration_ms=2004, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 11:42:59], mode=BUILD, duration=0:00:00.130, duration_ms=130, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 11:49:16], mode=BUILD, duration=0:00:00.290, duration_ms=290, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 11:49:16], mode=BUILD, duration=0:00:00.228, duration_ms=228, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 11:49:20], mode=PLATFORM_GENERATION, duration=0:00:03.848, duration_ms=3848, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 11:49:28], mode=PLATFORM_GENERATION, duration=0:00:07.485, duration_ms=7485, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 11:49:30], mode=BUILD, duration=0:00:01.893, duration_ms=1893, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 11:49:31], mode=BUILD, duration=0:00:00.207, duration_ms=207, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 11:57:17], mode=BUILD, duration=0:00:00.269, duration_ms=269, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 11:57:18], mode=BUILD, duration=0:00:00.196, duration_ms=196, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 11:57:21], mode=PLATFORM_GENERATION, duration=0:00:03.783, duration_ms=3783, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 11:57:29], mode=PLATFORM_GENERATION, duration=0:00:07.269, duration_ms=7269, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 11:57:31], mode=BUILD, duration=0:00:01.912, duration_ms=1912, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 11:57:32], mode=BUILD, duration=0:00:00.131, duration_ms=131, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 12:07:03], mode=BUILD, duration=0:00:00.266, duration_ms=266, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 12:07:03], mode=BUILD, duration=0:00:00.197, duration_ms=197, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 12:07:07], mode=PLATFORM_GENERATION, duration=0:00:03.983, duration_ms=3983, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 12:07:15], mode=PLATFORM_GENERATION, duration=0:00:08.161, duration_ms=8161, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 12:07:17], mode=BUILD, duration=0:00:01.934, duration_ms=1934, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 12:07:18], mode=BUILD, duration=0:00:00.150, duration_ms=150, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 12:16:23], mode=BUILD, duration=0:00:00.274, duration_ms=274, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 12:16:23], mode=BUILD, duration=0:00:00.226, duration_ms=226, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 12:16:27], mode=PLATFORM_GENERATION, duration=0:00:03.947, duration_ms=3947, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 12:16:35], mode=PLATFORM_GENERATION, duration=0:00:07.540, duration_ms=7540, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 12:16:37], mode=BUILD, duration=0:00:01.996, duration_ms=1996, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 12:16:38], mode=BUILD, duration=0:00:00.160, duration_ms=160, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 12:27:46], mode=BUILD, duration=0:00:00.287, duration_ms=287, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 12:27:46], mode=BUILD, duration=0:00:00.210, duration_ms=210, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 12:27:50], mode=PLATFORM_GENERATION, duration=0:00:04.313, duration_ms=4313, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 12:27:59], mode=PLATFORM_GENERATION, duration=0:00:08.940, duration_ms=8940, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 12:28:02], mode=BUILD, duration=0:00:02.427, duration_ms=2427, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 12:28:02], mode=BUILD, duration=0:00:00.169, duration_ms=169, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 12:35:00], mode=BUILD, duration=0:00:00.261, duration_ms=261, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 12:35:00], mode=BUILD, duration=0:00:00.211, duration_ms=211, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 12:35:04], mode=PLATFORM_GENERATION, duration=0:00:03.956, duration_ms=3956, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 12:35:11], mode=PLATFORM_GENERATION, duration=0:00:07.366, duration_ms=7366, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 12:35:14], mode=BUILD, duration=0:00:01.942, duration_ms=1942, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 12:35:14], mode=BUILD, duration=0:00:00.205, duration_ms=205, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 12:46:17], mode=BUILD, duration=0:00:00.292, duration_ms=292, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 12:46:17], mode=BUILD, duration=0:00:00.236, duration_ms=236, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 12:46:22], mode=PLATFORM_GENERATION, duration=0:00:04.617, duration_ms=4617, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 12:46:31], mode=PLATFORM_GENERATION, duration=0:00:09.165, duration_ms=9165, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 12:46:34], mode=BUILD, duration=0:00:02.191, duration_ms=2191, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 12:46:35], mode=BUILD, duration=0:00:00.217, duration_ms=217, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 12:57:05], mode=BUILD, duration=0:00:00.269, duration_ms=269, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 12:57:05], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 12:57:10], mode=PLATFORM_GENERATION, duration=0:00:04.637, duration_ms=4637, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 12:57:19], mode=PLATFORM_GENERATION, duration=0:00:08.941, duration_ms=8941, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 12:57:21], mode=BUILD, duration=0:00:02.204, duration_ms=2204, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 12:57:22], mode=BUILD, duration=0:00:00.254, duration_ms=254, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 13:14:23], mode=BUILD, duration=0:00:00.254, duration_ms=254, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 13:14:23], mode=BUILD, duration=0:00:00.210, duration_ms=210, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 13:14:27], mode=PLATFORM_GENERATION, duration=0:00:04.107, duration_ms=4107, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 13:14:34], mode=PLATFORM_GENERATION, duration=0:00:07.323, duration_ms=7323, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 13:14:37], mode=BUILD, duration=0:00:01.948, duration_ms=1948, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 13:14:37], mode=BUILD, duration=0:00:00.144, duration_ms=144, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 13:22:59], mode=BUILD, duration=0:00:00.266, duration_ms=266, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 13:22:59], mode=BUILD, duration=0:00:00.164, duration_ms=164, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 13:23:03], mode=PLATFORM_GENERATION, duration=0:00:04.188, duration_ms=4188, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 13:23:12], mode=PLATFORM_GENERATION, duration=0:00:08.851, duration_ms=8851, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 13:23:15], mode=BUILD, duration=0:00:02.336, duration_ms=2336, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 13:23:16], mode=BUILD, duration=0:00:00.158, duration_ms=158, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 13:37:12], mode=BUILD, duration=0:00:00.271, duration_ms=271, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 13:37:12], mode=BUILD, duration=0:00:00.197, duration_ms=197, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 13:37:16], mode=PLATFORM_GENERATION, duration=0:00:04.405, duration_ms=4405, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 13:37:26], mode=PLATFORM_GENERATION, duration=0:00:09.469, duration_ms=9469, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 13:37:29], mode=BUILD, duration=0:00:02.293, duration_ms=2293, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 13:37:29], mode=BUILD, duration=0:00:00.257, duration_ms=257, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 13:49:21], mode=BUILD, duration=0:00:00.261, duration_ms=261, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 13:49:22], mode=BUILD, duration=0:00:00.200, duration_ms=200, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 13:49:26], mode=PLATFORM_GENERATION, duration=0:00:04.194, duration_ms=4194, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 13:49:35], mode=PLATFORM_GENERATION, duration=0:00:08.773, duration_ms=8773, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 13:49:37], mode=BUILD, duration=0:00:02.248, duration_ms=2248, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 13:49:38], mode=BUILD, duration=0:00:00.172, duration_ms=172, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 13:55:51], mode=BUILD, duration=0:00:00.269, duration_ms=269, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 13:55:51], mode=BUILD, duration=0:00:00.212, duration_ms=212, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 13:55:55], mode=PLATFORM_GENERATION, duration=0:00:03.632, duration_ms=3632, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 13:56:02], mode=PLATFORM_GENERATION, duration=0:00:07.255, duration_ms=7255, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 13:56:04], mode=BUILD, duration=0:00:01.930, duration_ms=1930, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 13:56:05], mode=BUILD, duration=0:00:00.129, duration_ms=129, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 14:06:12], mode=BUILD, duration=0:00:00.663, duration_ms=663, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 14:06:13], mode=BUILD, duration=0:00:00.197, duration_ms=197, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 14:06:20], mode=PLATFORM_GENERATION, duration=0:00:06.961, duration_ms=6961, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 14:06:27], mode=PLATFORM_GENERATION, duration=0:00:07.588, duration_ms=7588, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 14:06:30], mode=BUILD, duration=0:00:02.113, duration_ms=2113, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 14:06:30], mode=BUILD, duration=0:00:00.139, duration_ms=139, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 14:14:32], mode=BUILD, duration=0:00:00.266, duration_ms=266, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 14:14:32], mode=BUILD, duration=0:00:00.196, duration_ms=196, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 14:14:36], mode=PLATFORM_GENERATION, duration=0:00:03.733, duration_ms=3733, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 14:14:44], mode=PLATFORM_GENERATION, duration=0:00:07.550, duration_ms=7550, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 14:14:46], mode=BUILD, duration=0:00:01.918, duration_ms=1918, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 14:14:46], mode=BUILD, duration=0:00:00.140, duration_ms=140, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 14:23:46], mode=BUILD, duration=0:00:00.270, duration_ms=270, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 14:23:46], mode=BUILD, duration=0:00:00.196, duration_ms=196, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 14:23:49], mode=PLATFORM_GENERATION, duration=0:00:03.601, duration_ms=3601, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 14:23:57], mode=PLATFORM_GENERATION, duration=0:00:07.158, duration_ms=7158, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 14:23:59], mode=BUILD, duration=0:00:01.925, duration_ms=1925, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 14:23:59], mode=BUILD, duration=0:00:00.147, duration_ms=147, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 14:35:57], mode=BUILD, duration=0:00:00.269, duration_ms=269, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 14:35:58], mode=BUILD, duration=0:00:00.210, duration_ms=210, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 14:36:02], mode=PLATFORM_GENERATION, duration=0:00:03.998, duration_ms=3998, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 14:36:10], mode=PLATFORM_GENERATION, duration=0:00:07.629, duration_ms=7629, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 14:36:12], mode=BUILD, duration=0:00:01.966, duration_ms=1966, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 14:36:12], mode=BUILD, duration=0:00:00.146, duration_ms=146, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 14:46:07], mode=BUILD, duration=0:00:00.270, duration_ms=270, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 14:46:07], mode=BUILD, duration=0:00:00.215, duration_ms=215, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 14:46:11], mode=PLATFORM_GENERATION, duration=0:00:03.934, duration_ms=3934, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 14:46:19], mode=PLATFORM_GENERATION, duration=0:00:08.136, duration_ms=8136, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 14:46:22], mode=BUILD, duration=0:00:02.150, duration_ms=2150, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 14:46:22], mode=BUILD, duration=0:00:00.147, duration_ms=147, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 15:00:20], mode=BUILD, duration=0:00:00.216, duration_ms=216, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 15:00:21], mode=BUILD, duration=0:00:00.208, duration_ms=208, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 15:00:24], mode=PLATFORM_GENERATION, duration=0:00:03.421, duration_ms=3421, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 15:00:31], mode=PLATFORM_GENERATION, duration=0:00:07.014, duration_ms=7014, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 15:00:33], mode=BUILD, duration=0:00:01.925, duration_ms=1925, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 15:00:34], mode=BUILD, duration=0:00:00.147, duration_ms=147, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 15:08:11], mode=BUILD, duration=0:00:00.268, duration_ms=268, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 15:08:11], mode=BUILD, duration=0:00:00.214, duration_ms=214, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 15:08:15], mode=PLATFORM_GENERATION, duration=0:00:03.794, duration_ms=3794, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 15:08:22], mode=PLATFORM_GENERATION, duration=0:00:07.086, duration_ms=7086, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 15:08:24], mode=BUILD, duration=0:00:01.810, duration_ms=1810, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 15:08:25], mode=BUILD, duration=0:00:00.125, duration_ms=125, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 15:17:02], mode=BUILD, duration=0:00:00.263, duration_ms=263, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 15:17:02], mode=BUILD, duration=0:00:00.212, duration_ms=212, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 15:17:06], mode=PLATFORM_GENERATION, duration=0:00:04.441, duration_ms=4441, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 15:17:16], mode=PLATFORM_GENERATION, duration=0:00:09.349, duration_ms=9349, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 15:17:18], mode=BUILD, duration=0:00:02.271, duration_ms=2271, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 15:17:19], mode=BUILD, duration=0:00:00.188, duration_ms=188, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 15:24:14], mode=BUILD, duration=0:00:00.274, duration_ms=274, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 15:24:14], mode=BUILD, duration=0:00:00.212, duration_ms=212, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 15:24:18], mode=PLATFORM_GENERATION, duration=0:00:03.809, duration_ms=3809, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 15:24:25], mode=PLATFORM_GENERATION, duration=0:00:07.183, duration_ms=7183, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 15:24:27], mode=BUILD, duration=0:00:01.912, duration_ms=1912, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 15:24:28], mode=BUILD, duration=0:00:00.138, duration_ms=138, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 18:16:36], mode=WORKBENCH_START, duration=0:00:10.067, duration_ms=10067, data={}
+timestamp=[2024-11-16 18:16:37], mode=WORKBENCH_UI_INIT, duration=0:00:00.935, duration_ms=935, data={editors_count=2, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,mb_dino,mb_dino_system,mb_usb_hdmi_top}
+timestamp=[2024-11-16 18:16:38], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.072, duration_ms=72, data={}
+timestamp=[2024-11-16 18:16:51], mode=BUILD, duration=0:00:00.681, duration_ms=681, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 18:16:52], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 18:16:56], mode=PLATFORM_GENERATION, duration=0:00:03.944, duration_ms=3944, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 18:17:04], mode=PLATFORM_GENERATION, duration=0:00:08.442, duration_ms=8442, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 18:17:07], mode=BUILD, duration=0:00:02.594, duration_ms=2594, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 18:17:08], mode=BUILD, duration=0:00:00.148, duration_ms=148, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 18:27:50], mode=PLATFORM_GENERATION, duration=0:00:08.524, duration_ms=8524, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 18:28:08], mode=BUILD, duration=0:00:00.268, duration_ms=268, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 18:28:08], mode=BUILD, duration=0:00:00.150, duration_ms=150, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 18:28:12], mode=PLATFORM_GENERATION, duration=0:00:03.660, duration_ms=3660, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 18:28:17], mode=PLATFORM_GENERATION, duration=0:00:05.304, duration_ms=5304, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 18:28:20], mode=BUILD, duration=0:00:02.261, duration_ms=2261, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 18:28:20], mode=BUILD, duration=0:00:00.142, duration_ms=142, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 18:40:25], mode=BUILD, duration=0:00:00.280, duration_ms=280, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 18:40:25], mode=BUILD, duration=0:00:00.197, duration_ms=197, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 18:40:29], mode=PLATFORM_GENERATION, duration=0:00:03.549, duration_ms=3549, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 18:40:36], mode=PLATFORM_GENERATION, duration=0:00:06.967, duration_ms=6967, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 18:40:38], mode=BUILD, duration=0:00:02.000, duration_ms=2000, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 18:40:39], mode=BUILD, duration=0:00:00.140, duration_ms=140, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 18:53:42], mode=BUILD, duration=0:00:00.262, duration_ms=262, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 18:53:42], mode=BUILD, duration=0:00:00.208, duration_ms=208, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 18:53:46], mode=PLATFORM_GENERATION, duration=0:00:03.735, duration_ms=3735, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 18:53:53], mode=PLATFORM_GENERATION, duration=0:00:06.935, duration_ms=6935, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 18:53:55], mode=BUILD, duration=0:00:01.917, duration_ms=1917, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 18:53:55], mode=BUILD, duration=0:00:00.149, duration_ms=149, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 19:00:38], mode=BUILD, duration=0:00:00.273, duration_ms=273, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 19:00:38], mode=BUILD, duration=0:00:00.209, duration_ms=209, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 19:00:43], mode=PLATFORM_GENERATION, duration=0:00:04.570, duration_ms=4570, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 19:00:51], mode=PLATFORM_GENERATION, duration=0:00:07.810, duration_ms=7810, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 19:00:53], mode=BUILD, duration=0:00:02.083, duration_ms=2083, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 19:00:54], mode=BUILD, duration=0:00:00.207, duration_ms=207, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 19:18:04], mode=BUILD, duration=0:00:00.282, duration_ms=282, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 19:18:04], mode=BUILD, duration=0:00:00.202, duration_ms=202, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 19:18:08], mode=PLATFORM_GENERATION, duration=0:00:04.270, duration_ms=4270, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 19:18:18], mode=PLATFORM_GENERATION, duration=0:00:09.558, duration_ms=9558, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 19:18:21], mode=BUILD, duration=0:00:02.188, duration_ms=2188, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 19:18:21], mode=BUILD, duration=0:00:00.229, duration_ms=229, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 19:32:52], mode=BUILD, duration=0:00:00.224, duration_ms=224, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 19:32:52], mode=BUILD, duration=0:00:00.208, duration_ms=208, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 19:32:57], mode=PLATFORM_GENERATION, duration=0:00:04.116, duration_ms=4116, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 19:33:06], mode=PLATFORM_GENERATION, duration=0:00:09.157, duration_ms=9157, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 19:33:09], mode=BUILD, duration=0:00:02.448, duration_ms=2448, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 19:33:09], mode=BUILD, duration=0:00:00.213, duration_ms=213, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 19:40:04], mode=BUILD, duration=0:00:00.268, duration_ms=268, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 19:40:04], mode=BUILD, duration=0:00:00.210, duration_ms=210, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 19:40:08], mode=PLATFORM_GENERATION, duration=0:00:04.055, duration_ms=4055, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 19:40:16], mode=PLATFORM_GENERATION, duration=0:00:07.753, duration_ms=7753, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 19:40:18], mode=BUILD, duration=0:00:02.005, duration_ms=2005, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 19:40:19], mode=BUILD, duration=0:00:00.136, duration_ms=136, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 19:50:59], mode=BUILD, duration=0:00:00.277, duration_ms=277, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 19:51:00], mode=BUILD, duration=0:00:00.211, duration_ms=211, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 19:51:03], mode=PLATFORM_GENERATION, duration=0:00:03.607, duration_ms=3607, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 19:51:11], mode=PLATFORM_GENERATION, duration=0:00:07.350, duration_ms=7350, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 19:51:13], mode=BUILD, duration=0:00:01.905, duration_ms=1905, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 19:51:13], mode=BUILD, duration=0:00:00.134, duration_ms=134, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 19:59:48], mode=BUILD, duration=0:00:00.258, duration_ms=258, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 19:59:49], mode=BUILD, duration=0:00:00.196, duration_ms=196, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 19:59:52], mode=PLATFORM_GENERATION, duration=0:00:03.787, duration_ms=3787, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 20:00:00], mode=PLATFORM_GENERATION, duration=0:00:07.147, duration_ms=7147, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 20:00:02], mode=BUILD, duration=0:00:01.982, duration_ms=1982, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 20:00:03], mode=BUILD, duration=0:00:00.144, duration_ms=144, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 20:06:01], mode=BUILD, duration=0:00:00.267, duration_ms=267, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 20:06:01], mode=BUILD, duration=0:00:00.151, duration_ms=151, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 20:06:05], mode=PLATFORM_GENERATION, duration=0:00:03.737, duration_ms=3737, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 20:06:13], mode=PLATFORM_GENERATION, duration=0:00:07.301, duration_ms=7301, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 20:06:15], mode=BUILD, duration=0:00:01.883, duration_ms=1883, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 20:06:15], mode=BUILD, duration=0:00:00.198, duration_ms=198, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 20:11:22], mode=BUILD, duration=0:00:00.259, duration_ms=259, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 20:11:22], mode=BUILD, duration=0:00:00.214, duration_ms=214, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 20:11:26], mode=PLATFORM_GENERATION, duration=0:00:03.614, duration_ms=3614, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 20:11:33], mode=PLATFORM_GENERATION, duration=0:00:07.104, duration_ms=7104, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 20:11:35], mode=BUILD, duration=0:00:01.866, duration_ms=1866, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 20:11:36], mode=BUILD, duration=0:00:00.139, duration_ms=139, data={name=mb_dino_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 20:24:06], mode=BUILD, duration=0:00:00.263, duration_ms=263, data={name=mb_dino, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 20:24:06], mode=BUILD, duration=0:00:00.210, duration_ms=210, data={name=mb_dino_system, configuration=Debug, clean_build=true}
+timestamp=[2024-11-16 20:24:10], mode=PLATFORM_GENERATION, duration=0:00:03.617, duration_ms=3617, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 20:24:17], mode=PLATFORM_GENERATION, duration=0:00:07.209, duration_ms=7209, data={name=mb_usb_hdmi_top}
+timestamp=[2024-11-16 20:24:19], mode=BUILD, duration=0:00:01.907, duration_ms=1907, data={name=mb_dino, configuration=Debug, clean_build=false}
+timestamp=[2024-11-16 20:24:20], mode=BUILD, duration=0:00:00.192, duration_ms=192, data={name=mb_dino_system, configuration=Debug, clean_build=false}

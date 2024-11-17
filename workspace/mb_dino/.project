@@ -3,7 +3,7 @@
 	<name>mb_dino</name>
 	<comment>Created by Vitis v2022.2</comment>
 	<projects>
-		<project>toplevel</project>
+		<project>mb_usb_hdmi_top</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
