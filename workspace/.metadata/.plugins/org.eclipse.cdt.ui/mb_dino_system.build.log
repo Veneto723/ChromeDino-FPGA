@@ -1,6 +1,6 @@
-20:24:20 **** Build of configuration Debug for project mb_dino_system ****
+15:17:08 **** Build of configuration Debug for project mb_dino_system ****
 make all 
 Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
 
-20:24:20 Build Finished (took 185ms)
+15:17:08 Build Finished (took 123ms)
 

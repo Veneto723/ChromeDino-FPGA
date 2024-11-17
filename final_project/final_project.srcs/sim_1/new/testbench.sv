@@ -1,47 +1,35 @@
 `timescale 1ns / 1ps
 module testbench();
 
-    // Parameters
-    parameter ADDR_WIDTH = 19;
-    localparam integer BG_ADDR_START = (112 * 2441) + 3; // Starting address for background
+// Testbench signals
+    logic clk;
+    logic reset;
+    logic [3:0] random;
 
-    // Inputs to the frameRAM module
-    logic [ADDR_WIDTH-1:0] read_address;
-    logic Clk;
-
-    // Output from the frameRAM module
-    logic [3:0] data_Out;
-    logic [3:0] expected_mem [0:317329];
-
-    // Instantiate the frameRAM module
-    frameRAM uut (
-        .data_In(5'b0),            // No data write needed
-        .write_address(19'b0),     // No write address needed
-        .read_address(read_address),
-        .we(1'b0),                 // Write enable set to 0
-        .Clk(Clk),
-        .data_Out(data_Out)
+    // Instantiate the DUT (Device Under Test)
+    lfsr dut (
+        .clk(clk),
+        .reset(reset),
+        .random(random)
     );
 
-    // Clock generation
+    // Clock generation (50 MHz clock, 20 ns period)
     initial begin
-        Clk = 0;
-        forever #1 Clk = ~Clk; // 2ns clock period
+        clk = 0;
+        forever #10 clk = ~clk; // Toggle every 10 ns
     end
 
     // Test procedure
     initial begin
-        // Initialize signals
-        read_address = 0;
+        $display("Time\tReset\tRandom");
+        $monitor("%t\t%b\t%h", $time, reset, random);
 
-        for (int i = 0; i < 317329; i = i + 1) begin
-            #10;
-            if (data_Out !== expected_mem[read_address])
-//                $display("Mismatch at address %0d: Expected %b, Got %b", read_address, expected_mem[read_address], data_Out);
-            read_address = read_address + 1;
-        end
 
-        $finish;
+        // Run the LFSR for several clock cycles
+        repeat (20) @(posedge clk);
+
+        // End simulation
+        $stop;
     end
 
 endmodule

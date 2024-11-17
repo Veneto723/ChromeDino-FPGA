@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "dino_rom_synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
 set_msg_config  -id {Synth 8-327}  -new_severity {ERROR} 
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run

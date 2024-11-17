@@ -91,12 +91,15 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 add_files D:/U.I.U.C/FA24/ECE385/final_project/dino_indexed.coe
-add_files d:/U.I.U.C/FA24/ECE385/final_project/dino_v2.coe
+add_files D:/U.I.U.C/FA24/ECE385/final_project/dino_v2.coe
+add_files D:/U.I.U.C/FA24/ECE385/final_project/dino_v3.coe
 read_verilog -library xil_defaultlib -sv {
   D:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.srcs/sources_1/imports/design_source/Color_Mapper.sv
   D:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.srcs/sources_1/imports/design_source/VGA_controller.sv
   D:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.srcs/sources_1/new/dino_palette.sv
+  D:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.srcs/sources_1/new/game_logic.sv
   D:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.srcs/sources_1/imports/design_source/hex_driver.sv
+  D:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.srcs/sources_1/new/lfsr.sv
   D:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv
 }
 add_files D:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.srcs/sources_1/bd/mb_usb/mb_usb.bd

@@ -35,10 +35,24 @@ module mb_usb_hdmi_top(
     logic hsync, vsync, vde;
     logic [3:0] red, green, blue;
     logic reset_ah;
-    
-    logic [15:0] score;
+    // game logic
+    logic [16:0] hi_score;
+    logic [16:0] score;
+    logic is_day;
+    logic [17:0] scroll_speed;
     
     assign reset_ah = reset_rtl_0;
+    
+    game_logic game_logic(
+        .alive(1'b1),
+        .clk(Clk),
+        .reset(reset_ah),
+        
+        .hi_score(hi_score),
+        .score(score),
+        .is_day(is_day),
+        .scroll_speed(scroll_speed)
+    );
     
     
     //Keycode HEX drivers
@@ -127,7 +141,10 @@ module mb_usb_hdmi_top(
         .drawX(drawX),
         .drawY(drawY),
         .vga_clk(clk_25MHz),
+        .hi_score(hi_score),
         .score(score),
+        .is_day(is_day),
+        .scroll_speed(scroll_speed),
         
         .red(red),
         .green(green),
