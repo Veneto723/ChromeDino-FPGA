@@ -1,6 +1,6 @@
 module dino_palette (
-	input logic [3:0] index, bg_index,
-	output logic [3:0] red, green, blue, bg_red, bg_green, bg_blue
+	input logic [3:0] index,
+	output logic [3:0] red, green, blue
 );
 
 localparam [0:8][11:0] palette = {
@@ -16,6 +16,5 @@ localparam [0:8][11:0] palette = {
 };
 
 assign {red, green, blue} = palette[index];
-assign {bg_red, bg_green, bg_blue} = palette[bg_index];
 
 endmodule

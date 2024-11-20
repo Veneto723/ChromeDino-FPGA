@@ -36,24 +36,33 @@ module mb_usb_hdmi_top(
     logic [3:0] red, green, blue;
     logic reset_ah;
     // game logic
-    logic [16:0] hi_score;
     logic [16:0] score;
     logic is_day;
-    logic [17:0] scroll_speed;
+    logic [16:0] scroll_speed;
+    logic [3:0] hi_score_decimal [0:4];
+    logic [3:0] score_decimal [0:4];
+    logic [9:0] dino_y;
     
     assign reset_ah = reset_rtl_0;
     
     game_logic game_logic(
         .alive(1'b1),
-        .clk(Clk),
+        .clk(clk_25MHz),
         .reset(reset_ah),
         
-        .hi_score(hi_score),
+        .hi_score_decimal(hi_score_decimal),
+        .score_decimal(score_decimal),
         .score(score),
         .is_day(is_day),
         .scroll_speed(scroll_speed)
     );
     
+    Dinosaur dino(
+        .clk(vsync),
+        .reset(reset),
+        .keycode(keycode0_gpio[7:0]),
+        .dino_y(dino_y)
+      );
     
     //Keycode HEX drivers
     hex_driver HexA (
@@ -140,16 +149,17 @@ module mb_usb_hdmi_top(
     Color_Mapper color_instance(
         .drawX(drawX),
         .drawY(drawY),
+        .dino_y(dino_y),
         .vga_clk(clk_25MHz),
-        .hi_score(hi_score),
-        .score(score),
+        .vsync(vsync),
+        .hi_score_decimal(hi_score_decimal),
+        .score_decimal(score_decimal),
         .is_day(is_day),
         .scroll_speed(scroll_speed),
         
         .red(red),
         .green(green),
         .blue(blue)
-        
     );
 
     

@@ -107,6 +107,15 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/Desktop/Dinosaur.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="C:/Users/ASUS/Desktop/Dinosaur.sv"/>
+          <Attr Name="ImportTime" Val="1732069154"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/design_source/VGA_controller.sv">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../Lab6/lab_6_2/lab_6_2.srcs/sources_1/imports/design_source/VGA_controller.sv"/>
@@ -152,18 +161,6 @@
           <Attr Name="ImportTime" Val="1728769381"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../dino_indexed.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../dino_v2.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>

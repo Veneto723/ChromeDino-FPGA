@@ -90,11 +90,10 @@ set_property ip_output_repo d:/U.I.U.C/FA24/ECE385/final_project/final_project/f
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files D:/U.I.U.C/FA24/ECE385/final_project/dino_indexed.coe
-add_files D:/U.I.U.C/FA24/ECE385/final_project/dino_v2.coe
 add_files D:/U.I.U.C/FA24/ECE385/final_project/dino_v3.coe
 read_verilog -library xil_defaultlib -sv {
   D:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.srcs/sources_1/imports/design_source/Color_Mapper.sv
+  D:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.srcs/sources_1/imports/Desktop/Dinosaur.sv
   D:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.srcs/sources_1/imports/design_source/VGA_controller.sv
   D:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.srcs/sources_1/new/dino_palette.sv
   D:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.srcs/sources_1/new/game_logic.sv
