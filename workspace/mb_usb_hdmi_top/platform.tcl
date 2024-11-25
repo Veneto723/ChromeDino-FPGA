@@ -300,3 +300,213 @@ platform generate
 platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
 platform clean
 platform generate
+platform active {mb_usb_hdmi_top}
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform active {mb_usb_hdmi_top}
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform active {mb_usb_hdmi_top}
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform active {mb_usb_hdmi_top}
+platform -make-local
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top_2.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform active {mb_usb_hdmi_top}
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform active {mb_usb_hdmi_top}
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform active {mb_usb_hdmi_top}
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate

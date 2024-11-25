@@ -3,12 +3,16 @@ module Color_Mapper (
     input logic vsync,
     input logic [9:0] drawX, drawY,
     input logic [9:0] dino_y,
+    input logic [1:0] dino_state,
     input logic [3:0] hi_score_decimal [0:4], 
     input logic [3:0] score_decimal [0:4],
     input logic is_day,
+    input logic alive,
     input logic [16:0] scroll_speed,
+    input logic cactus_enable, bird_enable,
     
-    output logic [3:0] red, green, blue
+    output logic [3:0] red, green, blue,
+    output logic collide
 );
 
 localparam integer SCREEN_WIDTH = 640;
@@ -22,17 +26,19 @@ localparam integer BG_Y_START = 440;
 localparam integer BG_Y_END = 466;
 localparam integer BG_SPRITE_WIDTH = SPRITE_WIDTH - 42;
 // Dino constants
-localparam integer DINO_ADDR_START = (2 * SPRITE_WIDTH) + 1854;
+localparam integer DINO_ADDR_START = (2 * SPRITE_WIDTH) + 1678;
+localparam integer DINO_DUCK_START = (35 * SPRITE_WIDTH) + 2203;
 localparam integer DINO_WIDTH = 88;
 localparam integer DINO_HEIGHT = 94;
 localparam integer DINO_X_POSITION = 10;
+localparam [1:0] GROUND = 2'b00, JUMPING = 2'b01, FALLING = 2'b10, DUCK = 2'b11;
 // Cloud constants
 localparam integer CLOUD_ADDR_START = (2 * SPRITE_WIDTH) + 167;
 localparam integer CLOUD_WIDTH = 92;
 localparam integer CLOUD_HEIGHT = 27;
 localparam integer MAX_CLOUDS = 3;
 localparam integer CLOUD_START_X [0:2] = '{51, SCREEN_WIDTH - 172, SCREEN_WIDTH - 263};
-localparam integer CLOUD_START_Y [0:2] = '{60, 200, 100}; // Irregular Y positions
+localparam integer CLOUD_START_Y [0:2] = '{60, 200, 100};
 // Moon constants
 localparam integer MOON_ADDR_START = (2 * SPRITE_WIDTH) + 953;
 localparam integer MOON_WIDTH = 24;
@@ -41,12 +47,23 @@ localparam integer MOON_Y_START = 5;
 // Star constants
 localparam integer STAR_ADDR_START = (50 * SPRITE_WIDTH) + 953;
 localparam integer STAR_WIDTH = 9;
-localparam integer STAR_HEIGHT = 9;       
+localparam integer STAR_HEIGHT = 9;
 localparam integer MAX_STARS = 5; 
 localparam integer STAR_START_X [0:4] = '{SCREEN_WIDTH - 7, SCREEN_WIDTH - 105, 
                                          SCREEN_WIDTH + 49, SCREEN_WIDTH + 173, 
                                          SCREEN_WIDTH - 215};
-localparam integer STAR_START_Y [0:4] = '{78, 59, 178, 101, 123}; // Irregular Y positions
+localparam integer STAR_START_Y [0:4] = '{78, 59, 178, 101, 123};
+// Cactus constants
+localparam integer B_CACTUS_ADDR_START = (1 * SPRITE_WIDTH) + 652;
+localparam integer S_CACTUS_ADDR_START = (2 * SPRITE_WIDTH) + 446;
+localparam integer B_CACTUS_WIDTH = 50;
+localparam integer B_CACTUS_HEIGHT = 100;
+localparam integer S_CACTUS_WIDTH = 34;
+localparam integer S_CACTUS_HEIGHT = 70;
+// Bird constants
+localparam integer BIRD_ADDR_START = (1 * SPRITE_WIDTH) + 260;
+localparam integer BIRD_WIDTH = 92;
+localparam integer BIRD_HEIGHT = 80;
 
 // Score test constants HI00000 00000
 localparam integer SCORE_FONT_ADDR_START = (1 * SPRITE_WIDTH) + 1292;
@@ -58,17 +75,18 @@ localparam integer SCORE_FONT_Y_START = 5;
 
 
 logic [18:0] rom_address, bg_address; 
-logic [3:0] rom_q, bg_q, palette_red, palette_green, palette_blue;
+logic [3:0] rom_q, bg_q, palette_red, palette_green, palette_blue, red2, green2, blue2;
 
 logic [16:0] scroll_counter;
 logic [3:0] frame_counter;
-
 logic [11:0] scroll_offset;
-logic [11:0] scroll_offset_next;
-logic [11:0] scroll_offset_mod;
-logic bg_on, dino_on, moon_on, cloud_on[MAX_CLOUDS], star_on[MAX_STARS], score_on;
-logic dino_frame;
-logic [3:0] random;
+
+logic bg_on, dino_on, moon_on, cloud_on[MAX_CLOUDS], star_on[MAX_STARS], score_on, cactus_on, bird_on;
+logic [3:0] dino_frame;
+logic [6:0] dino_height, dino_width;
+logic [5:0] dino_y_offset;
+logic [7:0] random;
+logic [20:0] dino_addr_start;
 
 // Cloud positions
 logic signed [10:0] cloud_x[MAX_CLOUDS];
@@ -85,8 +103,20 @@ logic signed [10:0] star_x[MAX_STARS];
 logic signed [10:0] star_src_x[MAX_STARS];
 logic [8:0] star_y[MAX_STARS];
 logic [1:0] star_sprite_index[MAX_STARS];    // Sprite selection index for each star
-logic [6:0] star_glimmer[MAX_STARS];
 
+// Cactus position
+logic signed [15:0] cactus_x;
+logic signed [15:0] cactus_src_x;
+logic [8:0] cactus_y;
+logic [5:0] cactus_width;
+logic [6:0] cactus_height;
+logic [2:0] cactus_sprite_index;    // Sprite selection index for each star
+
+// Bird position
+logic signed [15:0] bird_x;
+logic signed [15:0] bird_src_x;
+logic [8:0] bird_y;
+logic bird_sprite;
 
 initial begin
     for (int i = 0; i < MAX_CLOUDS; i++) begin
@@ -102,16 +132,39 @@ end
 
 // Scroll offset logic
 always_ff @ (posedge vga_clk) begin
-    if (scroll_counter >= scroll_speed) begin
+    scroll_counter <= scroll_counter + 1;
+    
+    if (scroll_counter >= scroll_speed && alive == 1'b1) begin
         scroll_counter <= 0;
         scroll_offset <= (scroll_offset + 1) % BG_SPRITE_WIDTH;
-    
+        
+        if (cactus_x + 50 <= 0 && cactus_enable == 1'b1) begin 
+            cactus_x <= SCREEN_WIDTH;
+            cactus_sprite_index <= random[1:0];
+             if (random[0] == 1'b0) begin
+                cactus_width <= B_CACTUS_WIDTH;
+                cactus_height <= B_CACTUS_HEIGHT;
+                cactus_y <= BG_Y_START - B_CACTUS_HEIGHT + 20;
+             end else begin
+                cactus_width <= S_CACTUS_WIDTH;
+                cactus_height <= S_CACTUS_HEIGHT;
+                cactus_y <= BG_Y_START - S_CACTUS_HEIGHT + 20;
+             end
+        end else 
+            cactus_x <= cactus_x - 1; // Move left
+        
+        if (bird_x + BIRD_WIDTH <= 0 && bird_enable == 1'b1) begin
+            bird_x <= SCREEN_WIDTH;
+            bird_y <= random[0] == 1'b0 ? 320 : 380;
+        end else
+            bird_x <= bird_x - 1;
+        
         if (is_day == 1'b1) begin
             // Cloud movement logic
             for (int i = 0; i < MAX_CLOUDS; i++) begin
                 if (cloud_x[i] + CLOUD_WIDTH <= 0) begin
                     cloud_x[i] <= SCREEN_WIDTH;
-                    cloud_y[i] <= random << 4;
+                    cloud_y[i] <= random[7:0];
                 end else begin
                     cloud_x[i] <= cloud_x[i] - 1; // Move left
                 end
@@ -130,23 +183,29 @@ always_ff @ (posedge vga_clk) begin
             for (int i = 0; i < MAX_STARS; i++) begin
                 if (star_x[i] + STAR_WIDTH <= 0) begin
                     star_x[i] <= SCREEN_WIDTH;
-                    star_y[i] = random << 4;
+                    star_y[i] = random;
                 end else begin
                      star_x[i] <= star_x[i] - 1; // Move left
                 end
             end
         end
-    end else begin
-        scroll_counter <= scroll_counter + 1;
     end
 end
 
-
 // Dino & Star frame toggle logic
 always_ff @ (posedge vsync) begin
+    frame_counter <= frame_counter + 1;
     if (frame_counter >= 10) begin
         frame_counter <= 0;
-        dino_frame <= ~dino_frame;
+        if (alive == 1'b0) 
+            dino_frame <= 3'b100;
+        else if (dino_state == DUCK) begin
+            dino_frame <= dino_frame == 3'b110 ? 3'b111 :3'b110;
+        end
+        else if (dino_state == JUMPING || dino_state == FALLING)
+            dino_frame <= 3'b000;
+        else
+            dino_frame <= dino_frame == 3'b010 ? 3'b011 : 3'b010;
         
         for (int i = 0; i < MAX_STARS; i++) begin
             if (star_sprite_index[i] == 2) begin
@@ -155,10 +214,22 @@ always_ff @ (posedge vsync) begin
                 star_sprite_index[i] <= star_sprite_index[i] + 1; // Move to the next sprite
              end
         end
-    end else begin
-        frame_counter <= frame_counter + 1;
+        bird_sprite = ~bird_sprite;
     end
 end
+
+always_comb begin
+    if (dino_state == DUCK) begin
+        dino_height = 60;
+        dino_width = 118;
+        dino_y_offset = 34;
+    end else begin
+        dino_height = DINO_HEIGHT;
+        dino_width = DINO_WIDTH;
+        dino_y_offset = 0;
+    end
+end
+
 
 // Calculate ROM address
 always_comb begin
@@ -166,16 +237,36 @@ always_comb begin
     dino_on = 1'b0;
     moon_on = 1'b0;
     score_on = 1'b0;
+    cactus_on = 1'b0;
+    collide = 1'b0;
+    bird_on = 1'b0;
     bg_address = 0;
     rom_address = 0;
     moon_src_x = drawX - moon_x;
+    cactus_src_x = drawX - cactus_x;
+    bird_src_x = drawX - bird_x;
     
     // Initialize arrays
     for (int i = 0; i < MAX_CLOUDS; i++) cloud_on[i] = 1'b0;
     for (int i = 0; i < MAX_STARS; i++) star_on[i] = 1'b0;
     
+    // Cactus logic
+    if (cactus_src_x >= 0 && cactus_src_x < cactus_width &&
+        drawY >= cactus_y && drawY <  cactus_y + cactus_height && cactus_enable == 1'b1) begin
+        cactus_on = 1'b1;
+        bg_address = (cactus_width == B_CACTUS_WIDTH ? B_CACTUS_ADDR_START : S_CACTUS_ADDR_START) 
+                                     + (cactus_sprite_index * cactus_width)
+                                     + ((drawY - cactus_y) * SPRITE_WIDTH) + cactus_src_x;         
+    end
+    // Bird logic
+    else if (bird_src_x >= 0 && bird_src_x < BIRD_WIDTH &&
+        drawY >= bird_y && drawY < bird_y + BIRD_HEIGHT && bird_enable == 1'b1) begin
+        bird_on = 1'b1;
+        bg_address = BIRD_ADDR_START + (bird_sprite * BIRD_WIDTH)
+                                     + ((drawY - bird_y) * SPRITE_WIDTH) + bird_src_x;         
+    end
     // Background logic
-    if (drawY >= BG_Y_START && drawY <= BG_Y_END &&
+    else if (drawY >= BG_Y_START && drawY <= BG_Y_END &&
         drawX >= BG_X_START && drawX <= BG_X_END) begin
         bg_on = 1'b1;
         if (drawX + scroll_offset < BG_SPRITE_WIDTH) 
@@ -185,15 +276,19 @@ always_comb begin
     end
 
     // Dino logic
-    if (drawX >= DINO_X_POSITION && drawX < DINO_X_POSITION + DINO_WIDTH &&
-        drawY >= dino_y && drawY <= dino_y + DINO_HEIGHT - 1) begin
+    if (drawX >= DINO_X_POSITION && drawX < DINO_X_POSITION + dino_width &&
+        drawY >= dino_y + dino_y_offset && drawY < dino_y + dino_y_offset + dino_height) begin
         dino_on = 1'b1;
-        if (dino_frame == 1'b0) 
-            rom_address = DINO_ADDR_START + ((drawY - dino_y) * SPRITE_WIDTH)
-                                 + (drawX - DINO_X_POSITION);
-        else 
-            rom_address = DINO_ADDR_START + DINO_WIDTH + ((drawY - dino_y) * SPRITE_WIDTH) 
-                                 + (drawX - DINO_X_POSITION);
+        if (dino_state != DUCK) begin
+            rom_address = DINO_ADDR_START + ((dino_frame >= 6 ? 3 : dino_frame) * DINO_WIDTH) 
+                                     + ((drawY - dino_y) * SPRITE_WIDTH) 
+                                     + (drawX - DINO_X_POSITION);
+                                     
+         end else 
+            rom_address = DINO_DUCK_START + (dino_frame[0] * 118) 
+                                     + ((drawY - dino_y - 34) * SPRITE_WIDTH) 
+                                     + (drawX - DINO_X_POSITION);
+            
     end
     else begin  
         if (is_day == 1'b0) begin
@@ -228,32 +323,11 @@ always_comb begin
                 end
             end
         end
-    end
+    end 
     
-//    for (int i = 0; i < 13; i++) begin
-//        // Assign characters and positions
-//        if (i == 0)
-//            current_char = 4'd10; // "H"
-//        else if (i == 1)
-//            current_char = 4'd11; // "I"
-//        else if (i < 7)
-//            current_char = hi_score_decimal[i - 2]; // hi_score digits
-//        else if (i > 7)
-//            current_char = score_decimal[i - 8]; // score digits
-
-//        // Calculate character position
-//        char_x = SCORE_FONT_X_START + i * SCORE_FONT_WIDTH;
-//        char_y = SCORE_FONT_Y_START;
-
-//        // Check if current pixel falls within the character bounds
-//        if (drawX >= char_x && drawX < char_x + SCORE_FONT_WIDTH &&
-//            drawY >= char_y && drawY < char_y + SCORE_FONT_HEIGHT && i != 7) begin
-//            score_on = 1'b1;
-//            rom_address = SCORE_FONT_ADDR_START + 
-//                                 (((current_char * SCORE_FONT_HEIGHT) + (drawY - char_y)) * SPRITE_WIDTH) + (drawX - char_x);
-//            break;
-//        end
-//    end
+    if (dino_on == 1'b1 && (cactus_on == 1'b1)) begin
+        //collide = 1'b1;
+    end
 end
 
 // Pixel selection
@@ -267,12 +341,22 @@ always_ff @ (posedge vga_clk) begin
         green <= palette_green;
         blue <= palette_blue;
     end 
-    else if (bg_on && bg_q != 0) begin
-        red <= 4'h5;
-        green <= 4'h5;
-        blue <= 4'h5;
-    end
     else begin
+        if (bg_on && bg_q != 0) begin
+            red <= 4'h5;
+            green <= 4'h5;
+            blue <= 4'h5;
+        end
+        if (cactus_on && bg_q != 0) begin 
+            red <= red2;
+            green <= green2;
+            blue <= blue2;
+        end
+        if (bird_on && bg_q != 0) begin 
+            red <= red2;
+            green <= green2;
+            blue <= blue2;
+        end
         for (int i = 0; i < MAX_CLOUDS; i++) begin
             if (cloud_on[i] && rom_q != 0) begin
                 red <= palette_red;
@@ -316,7 +400,11 @@ dino_palette dino_palette (
     .index  (rom_q),
     .red    (palette_red),
     .green  (palette_green),
-    .blue   (palette_blue)
+    .blue   (palette_blue),
+    .index2 (bg_q),
+    .red2 (red2),
+    .green2 (green2),
+    .blue2 (blue2)
 );
 
 // Random generator
