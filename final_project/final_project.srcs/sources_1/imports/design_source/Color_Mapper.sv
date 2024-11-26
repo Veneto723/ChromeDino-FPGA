@@ -3,11 +3,8 @@ module Color_Mapper (
     input logic vsync,
     input logic [9:0] drawX, drawY,
     input logic [9:0] dino_y,
-    input logic [1:0] dino_state,
-    input logic [3:0] hi_score_decimal [0:4], 
-    input logic [3:0] score_decimal [0:4],
+    input logic [1:0] dino_state, game_state,
     input logic is_day,
-    input logic alive,
     input logic [16:0] scroll_speed,
     input logic cactus_enable, bird_enable,
     
@@ -64,6 +61,18 @@ localparam integer S_CACTUS_HEIGHT = 70;
 localparam integer BIRD_ADDR_START = (1 * SPRITE_WIDTH) + 260;
 localparam integer BIRD_WIDTH = 92;
 localparam integer BIRD_HEIGHT = 80;
+// GAMEOVER constants
+localparam integer GO_ADDR_START = (1 * SPRITE_WIDTH) + 1;
+localparam integer GO_WIDTH = 72;
+localparam integer GO_HEIGHT = 64;
+localparam integer GO_X_START = 284;
+localparam integer GO_Y_START = 152;
+localparam integer GO_TEXT_ADDR_START = (29 * SPRITE_WIDTH) + 1294;
+localparam integer GO_TEXT_WIDTH = 381;
+localparam integer GO_TEXT_HEIGHT = 21;
+localparam integer GO_TEXT_X_START = 130; 
+localparam integer GO_TEXT_Y_START = 221;
+
 
 // Score test constants HI00000 00000
 localparam integer SCORE_FONT_ADDR_START = (1 * SPRITE_WIDTH) + 1292;
@@ -81,7 +90,7 @@ logic [16:0] scroll_counter;
 logic [3:0] frame_counter;
 logic [11:0] scroll_offset;
 
-logic bg_on, dino_on, moon_on, cloud_on[MAX_CLOUDS], star_on[MAX_STARS], score_on, cactus_on, bird_on;
+logic bg_on, dino_on, moon_on, cloud_on[MAX_CLOUDS], star_on[MAX_STARS], score_on, cactus_on, bird_on, go_on, go_text_on;
 logic [3:0] dino_frame;
 logic [6:0] dino_height, dino_width;
 logic [5:0] dino_y_offset;
@@ -134,11 +143,11 @@ end
 always_ff @ (posedge vga_clk) begin
     scroll_counter <= scroll_counter + 1;
     
-    if (scroll_counter >= scroll_speed && alive == 1'b1) begin
+    if (scroll_counter >= scroll_speed && game_state == 1'b01) begin
         scroll_counter <= 0;
         scroll_offset <= (scroll_offset + 1) % BG_SPRITE_WIDTH;
         
-        if (cactus_x + 50 <= 0 && cactus_enable == 1'b1) begin 
+        if (cactus_x + 50 <= 0 && cactus_enable == 1'b1 && bird_x <= 260) begin 
             cactus_x <= SCREEN_WIDTH;
             cactus_sprite_index <= random[1:0];
              if (random[0] == 1'b0) begin
@@ -153,9 +162,9 @@ always_ff @ (posedge vga_clk) begin
         end else 
             cactus_x <= cactus_x - 1; // Move left
         
-        if (bird_x + BIRD_WIDTH <= 0 && bird_enable == 1'b1) begin
+        if (bird_x + BIRD_WIDTH <= 0 && bird_enable == 1'b1 && cactus_x <= 260) begin
             bird_x <= SCREEN_WIDTH;
-            bird_y <= random[0] == 1'b0 ? 320 : 380;
+            bird_y <= random[0] == 1'b0 ? 310 : 370;
         end else
             bird_x <= bird_x - 1;
         
@@ -197,7 +206,7 @@ always_ff @ (posedge vsync) begin
     frame_counter <= frame_counter + 1;
     if (frame_counter >= 10) begin
         frame_counter <= 0;
-        if (alive == 1'b0) 
+        if (game_state == 2'b00) 
             dino_frame <= 3'b100;
         else if (dino_state == DUCK) begin
             dino_frame <= dino_frame == 3'b110 ? 3'b111 :3'b110;
@@ -240,6 +249,8 @@ always_comb begin
     cactus_on = 1'b0;
     collide = 1'b0;
     bird_on = 1'b0;
+    go_on = 1'b0;
+    go_text_on = 1'b0;
     bg_address = 0;
     rom_address = 0;
     moon_src_x = drawX - moon_x;
@@ -262,7 +273,7 @@ always_comb begin
     else if (bird_src_x >= 0 && bird_src_x < BIRD_WIDTH &&
         drawY >= bird_y && drawY < bird_y + BIRD_HEIGHT && bird_enable == 1'b1) begin
         bird_on = 1'b1;
-        bg_address = BIRD_ADDR_START + (bird_sprite * BIRD_WIDTH)
+        rom_address = BIRD_ADDR_START + (bird_sprite * BIRD_WIDTH)
                                      + ((drawY - bird_y) * SPRITE_WIDTH) + bird_src_x;         
     end
     // Background logic
@@ -325,8 +336,23 @@ always_comb begin
         end
     end 
     
+    // GAME OVER
+    if (game_state == 2'b10) begin
+        if (drawY >= GO_Y_START && drawY < GO_Y_START + GO_HEIGHT &&
+            drawX >= GO_X_START && drawX < GO_X_START + GO_WIDTH) begin
+            go_on = 1'b1;
+            bg_address = GO_ADDR_START + ((drawY - GO_Y_START) * SPRITE_WIDTH) + (drawX - GO_X_START);
+        end
+        if (drawY >= GO_TEXT_Y_START && drawY < GO_TEXT_Y_START + GO_TEXT_HEIGHT &&
+            drawX >= GO_TEXT_X_START && drawX < GO_TEXT_X_START + GO_TEXT_WIDTH) begin
+            go_text_on = 1'b1;
+            bg_address = GO_TEXT_ADDR_START + ((drawY - GO_TEXT_Y_START) * SPRITE_WIDTH) 
+                                 + (drawX - GO_TEXT_X_START);
+        end
+    end
+    
     if (dino_on == 1'b1 && (cactus_on == 1'b1)) begin
-        //collide = 1'b1;
+        collide = 1'b1;
     end
 end
 
@@ -341,6 +367,16 @@ always_ff @ (posedge vga_clk) begin
         green <= palette_green;
         blue <= palette_blue;
     end 
+    else if (go_on && bg_q != 0) begin
+        red <= red2;
+        green <= green2;
+        blue <= blue2;
+    end
+    else if (go_text_on && bg_q != 0) begin
+        red <= red2;
+        green <= green2;
+        blue <= blue2;
+    end
     else begin
         if (bg_on && bg_q != 0) begin
             red <= 4'h5;
@@ -352,10 +388,10 @@ always_ff @ (posedge vga_clk) begin
             green <= green2;
             blue <= blue2;
         end
-        if (bird_on && bg_q != 0) begin 
-            red <= red2;
-            green <= green2;
-            blue <= blue2;
+        if (bird_on && rom_q != 0) begin 
+            red <= palette_red;
+            green <= palette_green;
+            blue <= palette_blue;
         end
         for (int i = 0; i < MAX_CLOUDS; i++) begin
             if (cloud_on[i] && rom_q != 0) begin

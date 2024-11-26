@@ -71,7 +71,6 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 4
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config  -id {Synth 8-327}  -new_severity {ERROR} 
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
@@ -91,8 +90,7 @@ set_property ip_output_repo d:/U.I.U.C/FA24/ECE385/final_project/final_project/f
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files D:/U.I.U.C/FA24/ECE385/final_project/dino_v3.coe
-add_files d:/U.I.U.C/FA24/ECE385/final_project/dino.coe
+add_files D:/U.I.U.C/FA24/ECE385/final_project/dino.coe
 read_verilog -library xil_defaultlib -sv {
   D:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.srcs/sources_1/imports/design_source/Color_Mapper.sv
   D:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.srcs/sources_1/imports/Desktop/Dinosaur.sv

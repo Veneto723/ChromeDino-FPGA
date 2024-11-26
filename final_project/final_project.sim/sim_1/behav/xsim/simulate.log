@@ -1,23 +1,16 @@
 Time resolution is 1 ps
-Time	Reset	Random
-                   0	x	9
-               10000	x	3
-               30000	x	6
-               50000	x	d
-               70000	x	a
-               90000	x	5
-              110000	x	b
-              130000	x	7
-              150000	x	f
-              170000	x	e
-              190000	x	c
-              210000	x	8
-              230000	x	1
-              250000	x	2
-              270000	x	4
-              290000	x	9
-              310000	x	3
-              330000	x	6
-              350000	x	d
-              370000	x	a
-$stop called at time : 390 ns : File "D:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.srcs/sim_1/new/testbench.sv" Line 32
+Applying reset...
+Testing WAITING state...
+Starting the game...
+Error: Expected game_state_o = RUNNING (2'b01)
+Time: 15 ns  Iteration: 0  Process: /game_logic_tb/Initial44_3  Scope: game_logic_tb  File: D:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.srcs/sim_1/new/testbench.sv Line: 65
+Testing collision...
+Error: Alive should be 0 after collision
+Time: 25 ns  Iteration: 0  Process: /game_logic_tb/Initial44_3  Scope: game_logic_tb  File: D:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.srcs/sim_1/new/testbench.sv Line: 72
+Error: Expected game_state_o = ENDED (2'b10)
+Time: 25 ns  Iteration: 0  Process: /game_logic_tb/Initial44_3  Scope: game_logic_tb  File: D:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.srcs/sim_1/new/testbench.sv Line: 73
+Restarting the game...
+Error: Expected game_state_o = WAITING after reset
+Time: 35 ns  Iteration: 0  Process: /game_logic_tb/Initial44_3  Scope: game_logic_tb  File: D:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.srcs/sim_1/new/testbench.sv Line: 80
+All tests passed!
+$finish called at time : 35 ns : File "D:/U.I.U.C/FA24/ECE385/final_project/final_project/final_project.srcs/sim_1/new/testbench.sv" Line 84

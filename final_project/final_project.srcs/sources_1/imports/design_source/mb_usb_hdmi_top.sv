@@ -38,35 +38,32 @@ module mb_usb_hdmi_top(
     // game logic
     logic [16:0] score;
     logic is_day;
-    logic alive;
     logic [16:0] scroll_speed;
-    logic [3:0] hi_score_decimal [0:4];
-    logic [3:0] score_decimal [0:4];
     logic [9:0] dino_y;
-    logic [1:0] dino_state;
+    logic [1:0] dino_state, game_state;
     logic collide;
     logic cactus_enable, bird_enable;
+    logic alive;
     
     assign reset_ah = reset_rtl_0;
     
     game_logic game_logic(
         .clk(clk_25MHz),
-        .reset(reset_ah),
+        .reset(reset),
         .collide(collide),
+        .keycode(keycode0_gpio[7:0]),
         
         .alive(alive),
-        .hi_score_decimal(hi_score_decimal),
-        .score_decimal(score_decimal),
         .score(score),
         .is_day(is_day),
         .scroll_speed(scroll_speed),
         .cactus_enable(cactus_enable),
-        .bird_enable(bird_enable)
+        .bird_enable(bird_enable),
+        .game_state_o(game_state)
     );
     
     Dinosaur dino(
         .clk(vsync),
-        .reset(reset),
         .keycode(keycode0_gpio[7:0]),
         .alive(alive),
         
@@ -163,13 +160,11 @@ module mb_usb_hdmi_top(
         .dino_state(dino_state),
         .vga_clk(clk_25MHz),
         .vsync(vsync),
-        .hi_score_decimal(hi_score_decimal),
-        .score_decimal(score_decimal),
         .is_day(is_day),
-        .alive(alive),
         .scroll_speed(scroll_speed),
         .cactus_enable(cactus_enable),
         .bird_enable(bird_enable),
+        .game_state(game_state),
         
         .red(red),
         .green(green),

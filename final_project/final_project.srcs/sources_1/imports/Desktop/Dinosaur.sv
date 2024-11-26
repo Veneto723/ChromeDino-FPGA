@@ -27,6 +27,8 @@ module Dinosaur (
     dino_state_t dino_state, dino_state_next;
 
     assign dino_state_o = dino_state;
+    
+    initial dino_y = DINO_GROUND_Y;
 
     // Sequential logic: Update state, position, and velocity
     always_ff @(posedge clk or posedge reset) begin
