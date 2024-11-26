@@ -1,29 +1,25 @@
-module game_logic (
+module game_logic(
     input logic clk,
     input logic reset,
-    input logic [7:0] keycode,
     input logic collide,
-
+    input logic [7:0] keycode,
+     
+    output logic alive,
     output logic [16:0] score,
+    output logic [3:0] hi_score_decimal [0:4], 
+    output logic [3:0] score_decimal [0:4],
     output logic is_day,
     output logic [16:0] scroll_speed,
     output logic [1:0] game_state_o,
     output logic bird_enable,
-    output logic cactus_enable,
-    output logic alive
+    output logic cactus_enable
 );
 
-    // Parameters
     localparam integer SECOND = 3125000;
 
     // Internal variables
     logic [16:0] hi_score;
     logic [21:0] sec_counter;
-
-    // Dino-related signals
-    logic [9:0] dino_y;                 // Dino's vertical position
-    logic [1:0] dino_state;             // Dino's current state (GROUND, JUMPING, etc.)
-    logic [4:0] dino_velocity;          // Dino's vertical velocity
 
     // Game state machine
     typedef enum logic [1:0] {
@@ -33,76 +29,110 @@ module game_logic (
     } game_state_t;
 
     game_state_t game_state, game_state_next;
-
     assign game_state_o = game_state;
 
-    // Sequential logic for game state and counters
-    always_ff @(posedge clk or posedge reset) begin
+    // Initial conditions
+    initial begin
+        hi_score = 10871;
+        score = 0;
+        scroll_speed = 100000;
+        is_day = 1'b1;
+        alive = 1'b1;
+        game_state = WAITING;
+        cactus_enable = 1'b0;
+        bird_enable = 1'b0;
+    end
+
+    // Sequential logic: Manage score, day/night, and state transitions
+    always_ff @ (posedge clk or posedge reset) begin
         if (reset) begin
-            game_state <= WAITING;
-            hi_score <= 0;
+            // Reset all state variables
             score <= 0;
-            scroll_speed <= 80000;
             sec_counter <= 0;
             is_day <= 1'b1;
             alive <= 1'b1;
-            bird_enable <= 1'b0;
-            cactus_enable <= 1'b0;
+            scroll_speed <= 100000;
+            game_state <= WAITING;
+            cactus_enable = 1'b0;
+            bird_enable = 1'b0;
         end else begin
-            game_state <= game_state_next;
+            game_state <= game_state_next; // Update game state
 
-            if (game_state == RUNNING) begin
-                // Update score and hi_score
-                sec_counter <= sec_counter + 1;
-                if (sec_counter >= SECOND) begin
+            case (game_state)
+                WAITING: begin
+                    // Prepare game to start, no scoring
+                    score <= 0;
                     sec_counter <= 0;
-                    score <= score + 1;
-                    if (score > hi_score) hi_score <= score;
-
-                    // Enable cactus and bird at specific score thresholds
-                    if (score > 25) cactus_enable <= 1'b1;
-                    if (score > 100) bird_enable <= 1'b1;
-
-                    // Toggle day/night and adjust scroll speed
-                    if (score % 500 == 0) begin
-                        is_day <= ~is_day;
-                        if (scroll_speed > 20000)
-                            scroll_speed <= scroll_speed - 5000;
-                    end
+                    alive <= 1'b1; // Alive is set to 1 when in WAITING state to prepare for game start
+                    cactus_enable = 1'b0;
+                    bird_enable = 1'b0;
                 end
-            end
+
+                RUNNING: begin
+                    if (alive) begin
+                        // Update score and day/night cycle
+                        if (sec_counter >= SECOND) begin
+                            sec_counter <= 0;
+                            score <= score + 1;
+
+                            // Update hi_score
+                            if (score >= hi_score)
+                                hi_score <= score;
+                            if (score > 25)
+                                cactus_enable <= 1'b1;
+                            if (score > 100)
+                                bird_enable <= 1'b1;
+
+                            // Toggle day/night mode and adjust scroll speed
+                            if (score % 500 == 0 && score != 0) begin
+                                is_day <= ~is_day;
+                                if (scroll_speed > 100000)
+                                    scroll_speed <= scroll_speed - 5000;
+                            end
+                        end else begin
+                            sec_counter <= sec_counter + 1;
+                        end
+                    end
+
+                    // Detect collision
+                    if (collide == 1'b1)
+                        alive <= 1'b0;
+                end
+
+                ENDED: begin
+                    // Game over, alive is already 0
+                    alive <= 1'b0;
+                end
+            endcase
         end
     end
 
-    // Combinational logic for next game state and Dino control
+    // Combinational logic: Determine next game state
     always_comb begin
-        // Default assignments
-        game_state_next = game_state;
-        
-        if (collide) begin
-            alive = 1'b0;
-        end
+        game_state_next = game_state;  // Default to current state
 
         case (game_state)
             WAITING: begin
-                if (keycode == 8'h2C || keycode == 8'h52) begin  // Space or up_arrow to start
+                // Start the game on space bar or 'R' key
+                if (keycode == 8'h2C || keycode == 8'h52) begin
                     game_state_next = RUNNING;
                 end
             end
 
             RUNNING: begin
-                if (!alive) begin
+                // End game if the player is no longer alive
+                if (alive == 1'b0) begin
                     game_state_next = ENDED;
                 end
             end
 
             ENDED: begin
-                if (keycode == 8'h2C || keycode == 8'h52) begin  // Space or up_arrow to reset
+                // Wait for reset or key press to restart the game
+                if (reset || keycode == 8'h28) begin
                     game_state_next = WAITING;
                 end
             end
         endcase
-
     end
 
 endmodule

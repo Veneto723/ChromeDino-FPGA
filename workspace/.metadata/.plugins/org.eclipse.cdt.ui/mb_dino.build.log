@@ -1,4 +1,4 @@
-16:05:25 **** Build of configuration Debug for project mb_dino ****
+16:58:42 **** Build of configuration Debug for project mb_dino ****
 make all 
 'Building file: ../src/lw_usb/HID.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -83,5 +83,5 @@ mb-size mb_dino.elf  |tee "mb_dino.elf.size"
 'Finished building: mb_dino.elf.size'
 ' '
 
-16:05:27 Build Finished (took 1s.767ms)
+16:58:44 Build Finished (took 1s.809ms)
 

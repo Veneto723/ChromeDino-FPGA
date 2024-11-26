@@ -564,3 +564,21 @@ platform generate
 platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
 platform clean
 platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/U.I.U.C/FA24/ECE385/final_project/final_project/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate

@@ -143,60 +143,62 @@ end
 always_ff @ (posedge vga_clk) begin
     scroll_counter <= scroll_counter + 1;
     
-    if (scroll_counter >= scroll_speed && game_state == 1'b01) begin
+    if (scroll_counter >= scroll_speed) begin
         scroll_counter <= 0;
-        scroll_offset <= (scroll_offset + 1) % BG_SPRITE_WIDTH;
-        
-        if (cactus_x + 50 <= 0 && cactus_enable == 1'b1 && bird_x <= 260) begin 
-            cactus_x <= SCREEN_WIDTH;
-            cactus_sprite_index <= random[1:0];
-             if (random[0] == 1'b0) begin
-                cactus_width <= B_CACTUS_WIDTH;
-                cactus_height <= B_CACTUS_HEIGHT;
-                cactus_y <= BG_Y_START - B_CACTUS_HEIGHT + 20;
-             end else begin
-                cactus_width <= S_CACTUS_WIDTH;
-                cactus_height <= S_CACTUS_HEIGHT;
-                cactus_y <= BG_Y_START - S_CACTUS_HEIGHT + 20;
+        if (game_state == 1'b01) begin
+            scroll_offset <= (scroll_offset + 1) % BG_SPRITE_WIDTH;
+            
+            if (cactus_x + 50 <= 0 && cactus_enable == 1'b1 && bird_x <= 260) begin 
+                cactus_x <= SCREEN_WIDTH;
+                cactus_sprite_index <= random[1:0];
+                 if (random[0] == 1'b0) begin
+                    cactus_width <= B_CACTUS_WIDTH;
+                    cactus_height <= B_CACTUS_HEIGHT;
+                    cactus_y <= BG_Y_START - B_CACTUS_HEIGHT + 20;
+                 end else begin
+                    cactus_width <= S_CACTUS_WIDTH;
+                    cactus_height <= S_CACTUS_HEIGHT;
+                    cactus_y <= BG_Y_START - S_CACTUS_HEIGHT + 20;
+                 end
+            end else 
+                cactus_x <= cactus_x - 1; // Move left
+            
+            if (bird_x + BIRD_WIDTH <= 0 && bird_enable == 1'b1 && cactus_x <= 260) begin
+                bird_x <= SCREEN_WIDTH;
+                bird_y <= random[0] == 1'b0 ? 310 : 370;
+            end else
+                bird_x <= bird_x - 1;
+            
+            if (is_day == 1'b1) begin
+                // Cloud movement logic
+                for (int i = 0; i < MAX_CLOUDS; i++) begin
+                    if (cloud_x[i] + CLOUD_WIDTH <= 0) begin
+                        cloud_x[i] <= SCREEN_WIDTH;
+                        cloud_y[i] <= random[7:0];
+                    end else begin
+                        cloud_x[i] <= cloud_x[i] - 1; // Move left
+                    end
+                end
+            end
+            else begin
+                // Moon movement logic
+                if (moon_x + MOON_WIDTH <= 0) begin
+                    // Respawn moon
+                    moon_x <= SCREEN_WIDTH; // Reset to the right edge
+                    moon_sprite_index <= (moon_sprite_index + 1) % 6; // Change sprite
+                end else begin
+                    moon_x <= moon_x - 1; // Move left
+                end
+                // Star movement logic
+                for (int i = 0; i < MAX_STARS; i++) begin
+                    if (star_x[i] + STAR_WIDTH <= 0) begin
+                        star_x[i] <= SCREEN_WIDTH;
+                        star_y[i] = random;
+                    end else begin
+                         star_x[i] <= star_x[i] - 1; // Move left
+                    end
+                end
              end
-        end else 
-            cactus_x <= cactus_x - 1; // Move left
-        
-        if (bird_x + BIRD_WIDTH <= 0 && bird_enable == 1'b1 && cactus_x <= 260) begin
-            bird_x <= SCREEN_WIDTH;
-            bird_y <= random[0] == 1'b0 ? 310 : 370;
-        end else
-            bird_x <= bird_x - 1;
-        
-        if (is_day == 1'b1) begin
-            // Cloud movement logic
-            for (int i = 0; i < MAX_CLOUDS; i++) begin
-                if (cloud_x[i] + CLOUD_WIDTH <= 0) begin
-                    cloud_x[i] <= SCREEN_WIDTH;
-                    cloud_y[i] <= random[7:0];
-                end else begin
-                    cloud_x[i] <= cloud_x[i] - 1; // Move left
-                end
-            end
-        end
-        else begin
-            // Moon movement logic
-            if (moon_x + MOON_WIDTH <= 0) begin
-                // Respawn moon
-                moon_x <= SCREEN_WIDTH; // Reset to the right edge
-                moon_sprite_index <= (moon_sprite_index + 1) % 6; // Change sprite
-            end else begin
-                moon_x <= moon_x - 1; // Move left
-            end
-            // Star movement logic
-            for (int i = 0; i < MAX_STARS; i++) begin
-                if (star_x[i] + STAR_WIDTH <= 0) begin
-                    star_x[i] <= SCREEN_WIDTH;
-                    star_y[i] = random;
-                end else begin
-                     star_x[i] <= star_x[i] - 1; // Move left
-                end
-            end
         end
     end
 end
@@ -206,12 +208,12 @@ always_ff @ (posedge vsync) begin
     frame_counter <= frame_counter + 1;
     if (frame_counter >= 10) begin
         frame_counter <= 0;
-        if (game_state == 2'b00) 
+        if (game_state == 2'b10) 
             dino_frame <= 3'b100;
         else if (dino_state == DUCK) begin
             dino_frame <= dino_frame == 3'b110 ? 3'b111 :3'b110;
         end
-        else if (dino_state == JUMPING || dino_state == FALLING)
+        else if (dino_state == JUMPING || dino_state == FALLING || game_state == 2'b00)
             dino_frame <= 3'b000;
         else
             dino_frame <= dino_frame == 3'b010 ? 3'b011 : 3'b010;

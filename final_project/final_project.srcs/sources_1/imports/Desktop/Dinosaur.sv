@@ -9,8 +9,8 @@ module Dinosaur (
 
     // Parameters for the dino's jump behavior
     localparam [9:0] DINO_GROUND_Y = 370;       // Ground level of the dino
-    localparam [4:0] DINO_JUMP_VELOCITY = 20;  // Initial velocity for jump
-    localparam [1:0] GRAVITY = 1;              // Gravity effect (scaled for simplicity)
+    localparam [4:0] DINO_JUMP_VELOCITY = 21;  // Initial velocity for jump
+    localparam [1:0] GRAVITY = 0.5;              // Gravity effect (scaled for simplicity)
 
     logic [4:0] dino_velocity;                // Current velocity of the dino
     logic [4:0] dino_velocity_next;           // Next velocity value
