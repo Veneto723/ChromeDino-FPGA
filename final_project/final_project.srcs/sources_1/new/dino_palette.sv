@@ -12,7 +12,7 @@ localparam [0:8][11:0] palette = {
     {4'h5, 4'h5, 4'h5},    // Dino Main Grey #535353
     {4'h8, 4'h1, 4'h2},    // Apple Red #8b1826
     {4'h5, 4'h7, 4'h1},    // Apple Green #5b7919
-    {4'hB, 4'hB, 4'hB}    // Star Hightlight? #b9b9b9
+    {4'hB, 4'hB, 4'hB}    // Star Hightlight #b9b9b9
 };
 
 assign {red, green, blue} = palette[index];

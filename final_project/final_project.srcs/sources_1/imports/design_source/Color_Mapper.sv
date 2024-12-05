@@ -51,10 +51,10 @@ localparam integer STAR_START_X [0:4] = '{SCREEN_WIDTH - 7, SCREEN_WIDTH - 105,
                                          SCREEN_WIDTH - 215};
 localparam integer STAR_START_Y [0:4] = '{78, 59, 178, 101, 123};
 // Cactus constants
-localparam integer B_CACTUS_ADDR_START = (1 * SPRITE_WIDTH) + 652;
+//localparam integer B_CACTUS_ADDR_START = (1 * SPRITE_WIDTH) + 652;
+//localparam integer B_CACTUS_WIDTH = 50;
+//localparam integer B_CACTUS_HEIGHT = 100;
 localparam integer S_CACTUS_ADDR_START = (2 * SPRITE_WIDTH) + 446;
-localparam integer B_CACTUS_WIDTH = 50;
-localparam integer B_CACTUS_HEIGHT = 100;
 localparam integer S_CACTUS_WIDTH = 34;
 localparam integer S_CACTUS_HEIGHT = 70;
 // Bird constants
@@ -117,8 +117,8 @@ logic [1:0] star_sprite_index[MAX_STARS];    // Sprite selection index for each 
 logic signed [15:0] cactus_x;
 logic signed [15:0] cactus_src_x;
 logic [8:0] cactus_y;
-logic [5:0] cactus_width;
-logic [6:0] cactus_height;
+//logic [5:0] cactus_width;
+//logic [6:0] cactus_height;
 logic [2:0] cactus_sprite_index;    // Sprite selection index for each star
 
 // Bird position
@@ -150,16 +150,17 @@ always_ff @ (posedge vga_clk) begin
             
             if (cactus_x + 50 <= 0 && cactus_enable == 1'b1 && bird_x <= 260) begin 
                 cactus_x <= SCREEN_WIDTH;
+                cactus_y <= BG_Y_START - S_CACTUS_HEIGHT + 20;
                 cactus_sprite_index <= random[1:0];
-                 if (random[0] == 1'b0) begin
-                    cactus_width <= B_CACTUS_WIDTH;
-                    cactus_height <= B_CACTUS_HEIGHT;
-                    cactus_y <= BG_Y_START - B_CACTUS_HEIGHT + 20;
-                 end else begin
-                    cactus_width <= S_CACTUS_WIDTH;
-                    cactus_height <= S_CACTUS_HEIGHT;
-                    cactus_y <= BG_Y_START - S_CACTUS_HEIGHT + 20;
-                 end
+//                if (random[0] == 1'b0) begin
+//                    cactus_width <= B_CACTUS_WIDTH;
+//                    cactus_height <= B_CACTUS_HEIGHT;
+//                    cactus_y <= BG_Y_START - B_CACTUS_HEIGHT + 20;
+//                end else begin
+//                    cactus_width <= S_CACTUS_WIDTH;
+//                    cactus_height <= S_CACTUS_HEIGHT;
+//                    cactus_y <= BG_Y_START - S_CACTUS_HEIGHT + 20;
+//                end
             end else 
                 cactus_x <= cactus_x - 1; // Move left
             
@@ -264,12 +265,14 @@ always_comb begin
     for (int i = 0; i < MAX_STARS; i++) star_on[i] = 1'b0;
     
     // Cactus logic
-    if (cactus_src_x >= 0 && cactus_src_x < cactus_width &&
-        drawY >= cactus_y && drawY <  cactus_y + cactus_height && cactus_enable == 1'b1) begin
+    if (cactus_src_x >= 0 && cactus_src_x < S_CACTUS_WIDTH &&
+        drawY >= cactus_y && drawY <  cactus_y + S_CACTUS_HEIGHT && cactus_enable == 1'b1) begin
         cactus_on = 1'b1;
-        bg_address = (cactus_width == B_CACTUS_WIDTH ? B_CACTUS_ADDR_START : S_CACTUS_ADDR_START) 
-                                     + (cactus_sprite_index * cactus_width)
-                                     + ((drawY - cactus_y) * SPRITE_WIDTH) + cactus_src_x;         
+        bg_address = S_CACTUS_ADDR_START + (cactus_sprite_index * S_CACTUS_WIDTH)
+                                     + ((drawY - cactus_y) * SPRITE_WIDTH) + cactus_src_x;
+        // bg_address = (cactus_width == B_CACTUS_WIDTH ? B_CACTUS_ADDR_START : S_CACTUS_ADDR_START)
+        //                              + (cactus_sprite_index * cactus_width)
+        //                              + ((drawY - cactus_y) * SPRITE_WIDTH) + cactus_src_x;
     end
     // Bird logic
     else if (bird_src_x >= 0 && bird_src_x < BIRD_WIDTH &&
