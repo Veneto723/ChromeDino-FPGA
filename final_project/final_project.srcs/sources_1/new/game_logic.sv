@@ -33,9 +33,9 @@ module game_logic(
 
     // Initial conditions
     initial begin
-        hi_score = 10871;
+        hi_score = 0;
         score = 0;
-        scroll_speed = 100000;
+        scroll_speed = 80000;
         is_day = 1'b1;
         alive = 1'b1;
         game_state = WAITING;
@@ -51,10 +51,11 @@ module game_logic(
             sec_counter <= 0;
             is_day <= 1'b1;
             alive <= 1'b1;
-            scroll_speed <= 100000;
+            scroll_speed <= 80000;
             game_state <= WAITING;
             cactus_enable = 1'b0;
             bird_enable = 1'b0;
+            
         end else begin
             game_state <= game_state_next; // Update game state
 
@@ -66,6 +67,8 @@ module game_logic(
                     alive <= 1'b1; // Alive is set to 1 when in WAITING state to prepare for game start
                     cactus_enable = 1'b0;
                     bird_enable = 1'b0;
+                    scroll_speed <= 80000;
+                    is_day <= 1'b1;
                 end
 
                 RUNNING: begin
@@ -82,12 +85,22 @@ module game_logic(
                                 cactus_enable <= 1'b1;
                             if (score > 100)
                                 bird_enable <= 1'b1;
+                            if (score == 100)
+                                scroll_speed = 65000;
+                            if (score == 200)
+                                scroll_speed = 60000;
+                            if (score == 300)
+                                scroll_speed = 54500;
+                            if (score == 500)
+                                scroll_speed = 51500;
+                         
+                             
 
                             // Toggle day/night mode and adjust scroll speed
-                            if (score % 500 == 0 && score != 0) begin
+                            if (score % 300 == 0 && score != 0) begin
                                 is_day <= ~is_day;
-                                if (scroll_speed > 100000)
-                                    scroll_speed <= scroll_speed - 5000;
+//                                if (scroll_speed > 50000)
+//                                    scroll_speed <= scroll_speed - 5000;
                             end
                         end else begin
                             sec_counter <= sec_counter + 1;
@@ -134,5 +147,21 @@ module game_logic(
             end
         endcase
     end
+    always_comb begin
+        // Convert hi_score to decimal
+        hi_score_decimal[4] = hi_score % 10;
+        hi_score_decimal[3] = (hi_score / 10) % 10;
+        hi_score_decimal[2] = (hi_score / 100) % 10;
+        hi_score_decimal[1] = (hi_score / 1000) % 10;
+        hi_score_decimal[0] = hi_score / 10000;
+
+        // Convert score to decimal
+        score_decimal[4] = score % 10;
+        score_decimal[3] = (score / 10) % 10;
+        score_decimal[2] = (score / 100) % 10;
+        score_decimal[1] = (score / 1000) % 10;
+        score_decimal[0] = score / 10000;
+    end
+       
 
 endmodule

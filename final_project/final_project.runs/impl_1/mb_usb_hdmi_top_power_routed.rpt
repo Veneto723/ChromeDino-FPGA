@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Wed Dec  4 20:24:01 2024
+| Date             : Thu Dec  5 22:10:55 2024
 | Host             : Zephyrus running 64-bit major release  (build 9200)
 | Command          : report_power -file mb_usb_hdmi_top_power_routed.rpt -pb mb_usb_hdmi_top_power_summary_routed.pb -rpx mb_usb_hdmi_top_power_routed.rpx
 | Design           : mb_usb_hdmi_top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.477        |
+| Total On-Chip Power (W)  | 0.479        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.400        |
+| Dynamic (W)              | 0.402        |
 | Device Static (W)        | 0.077        |
 | Effective TJA (C/W)      | 4.9          |
 | Max Ambient (C)          | 82.6         |
@@ -52,23 +52,23 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.016 |       12 |       --- |             --- |
-| Slice Logic              |     0.007 |    10035 |       --- |             --- |
-|   LUT as Logic           |     0.006 |     3933 |     32600 |           12.06 |
+| Clocks                   |     0.015 |       12 |       --- |             --- |
+| Slice Logic              |     0.010 |    11562 |       --- |             --- |
+|   LUT as Logic           |     0.008 |     5040 |     32600 |           15.46 |
 |   LUT as Distributed RAM |    <0.001 |      172 |      9600 |            1.79 |
-|   CARRY4                 |    <0.001 |      424 |      8150 |            5.20 |
-|   Register               |    <0.001 |     3485 |     65200 |            5.35 |
-|   F7/F8 Muxes            |    <0.001 |       36 |     32600 |            0.11 |
+|   CARRY4                 |    <0.001 |      598 |      8150 |            7.34 |
+|   Register               |    <0.001 |     3500 |     65200 |            5.37 |
 |   LUT as Shift Register  |    <0.001 |      112 |      9600 |            1.17 |
+|   F7/F8 Muxes            |    <0.001 |       36 |     32600 |            0.11 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
 |   Others                 |     0.000 |      839 |       --- |             --- |
-| Signals                  |     0.010 |     7843 |       --- |             --- |
+| Signals                  |     0.012 |     8843 |       --- |             --- |
 | Block RAM                |     0.007 |       47 |        75 |           62.67 |
 | MMCM                     |     0.212 |        2 |         5 |           40.00 |
-| DSPs                     |     0.004 |       25 |       120 |           20.83 |
-| I/O                      |     0.143 |       42 |       210 |           20.00 |
+| DSPs                     |     0.004 |       21 |       120 |           17.50 |
+| I/O                      |     0.141 |       42 |       210 |           20.00 |
 | Static Power             |     0.077 |          |           |                 |
-| Total                    |     0.477 |          |           |                 |
+| Total                    |     0.479 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,7 +78,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.057 |       0.045 |      0.011 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.061 |       0.049 |      0.011 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.130 |       0.118 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.041 |       0.040 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.004 |       0.003 |      0.001 |       NA    | Unspecified | NA         |
@@ -153,20 +153,20 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| mb_usb_hdmi_top             |     0.400 |
+| mb_usb_hdmi_top             |     0.402 |
 |   clk_wiz                   |     0.106 |
 |     inst                    |     0.106 |
 |   color_instance            |     0.011 |
 |     dino_rom                |     0.007 |
 |       U0                    |     0.007 |
-|   dino                      |     0.001 |
-|   mb_block_i                |     0.134 |
+|   game_logic                |     0.001 |
+|   mb_block_i                |     0.133 |
 |     clk_wiz_1               |     0.106 |
 |       inst                  |     0.106 |
 |     gpio_usb_keycode        |     0.003 |
 |       U0                    |     0.003 |
-|     microblaze_0            |     0.014 |
-|       U0                    |     0.014 |
+|     microblaze_0            |     0.013 |
+|       U0                    |     0.013 |
 |     microblaze_0_axi_intc   |     0.001 |
 |       U0                    |     0.001 |
 |     microblaze_0_axi_periph |     0.001 |
@@ -175,9 +175,9 @@ Table of Contents
 |       U0                    |     0.004 |
 |     timer_usb_axi           |     0.002 |
 |       U0                    |     0.002 |
-|   vga                       |     0.002 |
-|   vga_to_hdmi               |     0.132 |
-|     inst                    |     0.132 |
+|   vga                       |     0.005 |
+|   vga_to_hdmi               |     0.133 |
+|     inst                    |     0.133 |
 +-----------------------------+-----------+
 
 

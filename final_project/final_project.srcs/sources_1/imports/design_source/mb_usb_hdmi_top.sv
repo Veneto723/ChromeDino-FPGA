@@ -44,6 +44,8 @@ module mb_usb_hdmi_top(
     logic collide;
     logic cactus_enable, bird_enable;
     logic alive;
+    logic [3:0] hi_score_decimal [0:4];
+    logic [3:0] score_decimal [0:4];
     
     assign reset_ah = reset_rtl_0;
     
@@ -59,7 +61,9 @@ module mb_usb_hdmi_top(
         .scroll_speed(scroll_speed),
         .cactus_enable(cactus_enable),
         .bird_enable(bird_enable),
-        .game_state_o(game_state)
+        .game_state_o(game_state),
+        .hi_score_decimal(hi_score_decimal),
+        .score_decimal(score_decimal)
     );
     
     Dinosaur dino(
@@ -165,6 +169,8 @@ module mb_usb_hdmi_top(
         .cactus_enable(cactus_enable),
         .bird_enable(bird_enable),
         .game_state(game_state),
+        .hi_score_decimal(hi_score_decimal),
+        .score_decimal(score_decimal),
         
         .red(red),
         .green(green),

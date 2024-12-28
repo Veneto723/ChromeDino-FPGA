@@ -7,6 +7,8 @@ module Color_Mapper (
     input logic is_day,
     input logic [16:0] scroll_speed,
     input logic cactus_enable, bird_enable,
+    input logic [3:0] hi_score_decimal [0:4], 
+    input logic [3:0] score_decimal [0:4],
     
     output logic [3:0] red, green, blue,
     output logic collide
@@ -51,9 +53,6 @@ localparam integer STAR_START_X [0:4] = '{SCREEN_WIDTH - 7, SCREEN_WIDTH - 105,
                                          SCREEN_WIDTH - 215};
 localparam integer STAR_START_Y [0:4] = '{78, 59, 178, 101, 123};
 // Cactus constants
-//localparam integer B_CACTUS_ADDR_START = (1 * SPRITE_WIDTH) + 652;
-//localparam integer B_CACTUS_WIDTH = 50;
-//localparam integer B_CACTUS_HEIGHT = 100;
 localparam integer S_CACTUS_ADDR_START = (2 * SPRITE_WIDTH) + 446;
 localparam integer S_CACTUS_WIDTH = 34;
 localparam integer S_CACTUS_HEIGHT = 70;
@@ -62,7 +61,7 @@ localparam integer BIRD_ADDR_START = (1 * SPRITE_WIDTH) + 260;
 localparam integer BIRD_WIDTH = 92;
 localparam integer BIRD_HEIGHT = 80;
 // GAMEOVER constants
-localparam integer GO_ADDR_START = (1 * SPRITE_WIDTH) + 1;
+localparam integer GO_ADDR_START = (1 * SPRITE_WIDTH) + 2;
 localparam integer GO_WIDTH = 72;
 localparam integer GO_HEIGHT = 64;
 localparam integer GO_X_START = 284;
@@ -72,7 +71,6 @@ localparam integer GO_TEXT_WIDTH = 381;
 localparam integer GO_TEXT_HEIGHT = 21;
 localparam integer GO_TEXT_X_START = 130; 
 localparam integer GO_TEXT_Y_START = 221;
-
 
 // Score test constants HI00000 00000
 localparam integer SCORE_FONT_ADDR_START = (1 * SPRITE_WIDTH) + 1292;
@@ -96,6 +94,7 @@ logic [6:0] dino_height, dino_width;
 logic [5:0] dino_y_offset;
 logic [7:0] random;
 logic [20:0] dino_addr_start;
+logic [4:0] digit_index;
 
 // Cloud positions
 logic signed [10:0] cloud_x[MAX_CLOUDS];
@@ -117,8 +116,6 @@ logic [1:0] star_sprite_index[MAX_STARS];    // Sprite selection index for each 
 logic signed [15:0] cactus_x;
 logic signed [15:0] cactus_src_x;
 logic [8:0] cactus_y;
-//logic [5:0] cactus_width;
-//logic [6:0] cactus_height;
 logic [2:0] cactus_sprite_index;    // Sprite selection index for each star
 
 // Bird position
@@ -127,7 +124,15 @@ logic signed [15:0] bird_src_x;
 logic [8:0] bird_y;
 logic bird_sprite;
 
+// background color
+logic [3:0] bg_red, bg_green, bg_blue;
+logic [3:0] color_step;
+
 initial begin
+    bg_red = 4'hf;
+    bg_green = 4'hf;
+    bg_blue = 4'hf;
+    color_step = 4'h3;
     for (int i = 0; i < MAX_CLOUDS; i++) begin
         cloud_x[i] = CLOUD_START_X[i];
         cloud_y[i] = CLOUD_START_Y[i];
@@ -152,15 +157,6 @@ always_ff @ (posedge vga_clk) begin
                 cactus_x <= SCREEN_WIDTH;
                 cactus_y <= BG_Y_START - S_CACTUS_HEIGHT + 20;
                 cactus_sprite_index <= random[1:0];
-//                if (random[0] == 1'b0) begin
-//                    cactus_width <= B_CACTUS_WIDTH;
-//                    cactus_height <= B_CACTUS_HEIGHT;
-//                    cactus_y <= BG_Y_START - B_CACTUS_HEIGHT + 20;
-//                end else begin
-//                    cactus_width <= S_CACTUS_WIDTH;
-//                    cactus_height <= S_CACTUS_HEIGHT;
-//                    cactus_y <= BG_Y_START - S_CACTUS_HEIGHT + 20;
-//                end
             end else 
                 cactus_x <= cactus_x - 1; // Move left
             
@@ -209,6 +205,23 @@ always_ff @ (posedge vsync) begin
     frame_counter <= frame_counter + 1;
     if (frame_counter >= 10) begin
         frame_counter <= 0;
+         if (is_day && game_state == 2'b01) begin
+        // Gradually increase color to white
+        if (bg_red < 4'hF) bg_red <= bg_red + color_step;
+        if (bg_red < 4'hF) bg_green <= bg_green + color_step;
+        if (bg_red < 4'hF) bg_blue  <= bg_blue + color_step;
+    end else if(~is_day && game_state == 2'b01 )begin
+        // Gradually decrease color to black
+        if (bg_red > 4'h0) bg_red <= bg_red - color_step;
+        if (bg_red > 4'h0) bg_green <= bg_green - color_step;
+        if (bg_red > 4'h0) bg_blue <= bg_blue - color_step;
+    end
+        if(game_state == 2'b00)begin
+            bg_red = 4'hf;
+            bg_green = 4'hf;
+            bg_blue = 4'hf;
+        end
+        
         if (game_state == 2'b10) 
             dino_frame <= 3'b100;
         else if (dino_state == DUCK) begin
@@ -270,16 +283,6 @@ always_comb begin
         cactus_on = 1'b1;
         bg_address = S_CACTUS_ADDR_START + (cactus_sprite_index * S_CACTUS_WIDTH)
                                      + ((drawY - cactus_y) * SPRITE_WIDTH) + cactus_src_x;
-        // bg_address = (cactus_width == B_CACTUS_WIDTH ? B_CACTUS_ADDR_START : S_CACTUS_ADDR_START)
-        //                              + (cactus_sprite_index * cactus_width)
-        //                              + ((drawY - cactus_y) * SPRITE_WIDTH) + cactus_src_x;
-    end
-    // Bird logic
-    else if (bird_src_x >= 0 && bird_src_x < BIRD_WIDTH &&
-        drawY >= bird_y && drawY < bird_y + BIRD_HEIGHT && bird_enable == 1'b1) begin
-        bird_on = 1'b1;
-        rom_address = BIRD_ADDR_START + (bird_sprite * BIRD_WIDTH)
-                                     + ((drawY - bird_y) * SPRITE_WIDTH) + bird_src_x;         
     end
     // Background logic
     else if (drawY >= BG_Y_START && drawY <= BG_Y_END &&
@@ -291,6 +294,13 @@ always_comb begin
             bg_address = BG_ADDR_START + ((drawY - BG_Y_START) * SPRITE_WIDTH) + ((drawX + scroll_offset) % BG_SPRITE_WIDTH);
     end
 
+    // Bird logic
+    if (bird_src_x >= 0 && bird_src_x < BIRD_WIDTH &&
+        drawY >= bird_y && drawY < bird_y + BIRD_HEIGHT && bird_enable == 1'b1) begin
+        bird_on = 1'b1;
+        rom_address = BIRD_ADDR_START + (bird_sprite * BIRD_WIDTH)
+                                     + ((drawY - bird_y) * SPRITE_WIDTH) + bird_src_x;         
+    end
     // Dino logic
     if (drawX >= DINO_X_POSITION && drawX < DINO_X_POSITION + dino_width &&
         drawY >= dino_y + dino_y_offset && drawY < dino_y + dino_y_offset + dino_height) begin
@@ -355,17 +365,39 @@ always_comb begin
                                  + (drawX - GO_TEXT_X_START);
         end
     end
+    // Score logic
+    if (drawY >= SCORE_FONT_Y_START && drawY < SCORE_FONT_Y_START + SCORE_FONT_HEIGHT &&
+        drawX >= SCORE_FONT_X_START && drawX < SCORE_FONT_X_END) begin
+        digit_index = (drawX - SCORE_FONT_X_START) / SCORE_FONT_WIDTH; // Determine the digit being drawn
+        if (digit_index == 0) begin
+            score_on = 1'b1;
+            bg_address = SCORE_FONT_ADDR_START + 10 * SCORE_FONT_WIDTH + ((drawY - SCORE_FONT_Y_START) * SPRITE_WIDTH) + ((drawX - SCORE_FONT_X_START) % SCORE_FONT_WIDTH); // 'H'
+        end else if (digit_index == 1) begin
+            score_on = 1'b1;
+            bg_address = SCORE_FONT_ADDR_START + 11 * SCORE_FONT_WIDTH + ((drawY - SCORE_FONT_Y_START) * SPRITE_WIDTH) + ((drawX - SCORE_FONT_X_START) % SCORE_FONT_WIDTH); // 'I'
+        end else if (digit_index >= 2 && digit_index < 7) begin
+            score_on = 1'b1;
+            bg_address = SCORE_FONT_ADDR_START + (hi_score_decimal[digit_index - 2] * SCORE_FONT_WIDTH) + ((drawY - SCORE_FONT_Y_START) * SPRITE_WIDTH) + ((drawX - SCORE_FONT_X_START) % SCORE_FONT_WIDTH);
+        end else if (digit_index == 7) begin
+            score_on = 1'b0; // Space
+        end else if (digit_index >= 8 && digit_index < 13) begin
+            score_on = 1'b1;
+            bg_address = SCORE_FONT_ADDR_START + (score_decimal[digit_index - 8] * SCORE_FONT_WIDTH) + ((drawY - SCORE_FONT_Y_START) * SPRITE_WIDTH) + ((drawX - SCORE_FONT_X_START) % SCORE_FONT_WIDTH);
+        end
+    end
     
-    if (dino_on == 1'b1 && (cactus_on == 1'b1)) begin
+    if (dino_on == 1'b1 && (cactus_on == 1'b1 || bird_on == 1'b1)) begin
         collide = 1'b1;
     end
 end
 
 // Pixel selection
 always_ff @ (posedge vga_clk) begin
-    red <= is_day ? 4'hf : 4'h0;
-    green <= is_day ? 4'hf : 4'h0;
-    blue <= is_day ? 4'hf : 4'h0;
+    
+    
+    red <= bg_red;
+    green <= bg_green;
+    blue <= bg_blue;
     
     if (dino_on && rom_q != 0) begin
         red <= palette_red;
@@ -381,6 +413,11 @@ always_ff @ (posedge vga_clk) begin
         red <= red2;
         green <= green2;
         blue <= blue2;
+    end
+    else if (score_on && bg_q != 0) begin
+        red <= red2;      
+        green <= green2;  
+        blue <= blue2; 
     end
     else begin
         if (bg_on && bg_q != 0) begin
